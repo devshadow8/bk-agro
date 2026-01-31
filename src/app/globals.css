@@ -24,3 +24,181 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 4s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradient-text {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 10s ease infinite;
+}
+
+.animate-gradient-text {
+  background-size: 200% 200%;
+  animation: gradient-text 4s ease infinite;
+}
+
+    
+      @keyframes float-slow {
+          0%,
+          100% {
+            transform: translate(0, 0) scale(1);
+          }
+          50% {
+            transform: translate(20px, -20px) scale(1.1);
+          }
+        }
+
+        @keyframes float-slower {
+          0%,
+          100% {
+            transform: translate(0, 0) scale(1);
+          }
+          50% {
+            transform: translate(-30px, 30px) scale(1.15);
+          }
+        }
+
+        @keyframes float-slowest {
+          0%,
+          100% {
+            transform: translate(0, 0) scale(1);
+          }
+          50% {
+            transform: translate(15px, 15px) scale(1.08);
+          }
+        }
+
+        .animate-float-slow {
+          animation: float-slow 8s ease-in-out infinite;
+        }
+
+        .animate-float-slower {
+          animation: float-slower 10s ease-in-out infinite;
+        }
+
+        .animate-float-slowest {
+          animation: float-slowest 12s ease-in-out infinite;
+        }
+      
+
+        
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-25px); }
+        }
+
+        .animate-float { animation: float 4s ease-in-out infinite; }
+        .animate-float-delayed-1 { animation: float 4s ease-in-out infinite 0.5s; }
+        .animate-float-delayed-2 { animation: float 4s ease-in-out infinite 1s; }
+        .animate-float-delayed-3 { animation: float 4s ease-in-out infinite 1.5s; }
+        .animate-float-delayed-4 { animation: float 4s ease-in-out infinite 2s; }
+        .animate-float-delayed-5 { animation: float 4s ease-in-out infinite 2.5s; }
+
+        .wave-line {
+          stroke-dasharray: 2500;
+          stroke-dashoffset: 2500;
+          animation: drawWave 3s ease-out forwards;
+        }
+
+        @keyframes drawWave {
+          to { stroke-dashoffset: 0; }
+        }
+
+        .pulse-circle {
+          animation: pulseCircle 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseCircle {
+          0%, 100% { 
+            opacity: 0.9;
+            r: 8;
+          }
+          50% { 
+            opacity: 0.5;
+            r: 12;
+          }
+        }
+
+        .flow-dot {
+          filter: drop-shadow(0 0 6px currentColor);
+        }
+
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+
+        .animate-spin-slow {
+          animation: spin-slow 10s linear infinite;
+        }
+
+        @keyframes pulse-slow {
+          0%, 100% { opacity: 0.7; }
+          50% { opacity: 1; }
+        }
+
+        .animate-pulse-slow {
+          animation: pulse-slow 3s ease-in-out infinite;
+        }
+
+
+      
+        @keyframes float-leaf {
+          0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+          10%, 90% { opacity: 1; }
+          100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        .animate-float-leaf {
+          animation: float-leaf linear infinite;
+        }
+      
+  
+        @media (prefers-reduced-motion: reduce) {
+          * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
+    
