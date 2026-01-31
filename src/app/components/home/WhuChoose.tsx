@@ -59,9 +59,7 @@ const WhyChooseUs = () => {
 
   return (
     <section className="relative py-24 bg-white overflow-hidden">
-      {/* Animated Gradient Background - Pure Farming Aesthetic */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Organic Gradient Blobs */}
         <div className="absolute top-0 left-0 w-full h-full">
           <motion.div
             className="absolute top-20 left-10 w-96 h-96 rounded-full opacity-20"
