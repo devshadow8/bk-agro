@@ -16,7 +16,7 @@ const servicesDropdown = [
 
 const navItems = [
   { name: "Home", link: "/" },
-  { name: "About BK-Agro", link: "/about-bk-agro" },
+  { name: "About BK-Agro", link: "/about-us" },
   { name: "Business", link: "/business" },
   { name: "Services", link: "/services", dropdown: servicesDropdown },
 ];

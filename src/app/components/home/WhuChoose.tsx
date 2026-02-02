@@ -2,60 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Sprout, 
-  FileCheck, 
-  Globe2, 
-  FlaskConical, 
-  Handshake, 
-  TrendingUp 
-} from 'lucide-react';
-
+import { Sprout, FileCheck, Globe2, FlaskConical, Handshake, TrendingUp  } from 'lucide-react';
+import {reasons} from "../../utils/data"
+  
 const WhyChooseUs = () => {
-  const reasons = [
-    {
-      icon: Sprout,
-      title: 'Structured Farming Model',
-      description: 'We follow a planned cultivation approach with defined timelines, farming guidance, and quality-focused practices.',
-      gradient: 'from-green-600 to-emerald-600',
-      delay: 0.1
-    },
-    {
-      icon: FileCheck,
-      title: 'Clear Investment Framework',
-      description: 'Our model provides clarity on investment size, crop duration, and market linkage, helping partners understand the process from start to finish.',
-      gradient: 'from-emerald-600 to-teal-600',
-      delay: 0.2
-    },
-    {
-      icon: Globe2,
-      title: 'Domestic & Export Market Access',
-      description: 'We balance domestic demand with international export channels, reducing dependency on a single market.',
-      gradient: 'from-teal-600 to-green-700',
-      delay: 0.3
-    },
-    {
-      icon: FlaskConical,
-      title: 'Focus on Quality & Standards',
-      description: 'Emphasis on harvest quality, grading, and handling to meet both domestic and export market expectations.',
-      gradient: 'from-green-700 to-lime-600',
-      delay: 0.4
-    },
-    {
-      icon: Handshake,
-      title: 'End-to-End Support',
-      description: 'From cultivation planning to post-harvest handling and market supply, support is provided across all stages.',
-      gradient: 'from-lime-600 to-green-600',
-      delay: 0.5
-    },
-    {
-      icon: TrendingUp,
-      title: 'Market-Linked Approach',
-      description: 'Returns are linked to real market conditions, ensuring transparency and realistic expectations.',
-      gradient: 'from-green-600 to-emerald-700',
-      delay: 0.6
-    }
-  ];
+  
 
   return (
     <section className="relative py-24 bg-white overflow-hidden">

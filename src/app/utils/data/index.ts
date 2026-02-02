@@ -1,8 +1,10 @@
 
-import { Sprout, Clock, TrendingUp, Globe2 ,  Users,  Package, Store, Truck, Building2, DollarSign, AlertCircle,  MapPin, Mail, Phone,Facebook, Twitter, Instagram,Linkedin,Youtube,
-  Send,
-  ChevronRight,
-  Leaf} from 'lucide-react';
+import { Sprout, Clock, TrendingUp, Globe2 , CheckCircle2, Target,ArrowRight, Shield,
+   Users,  Package, Store, Truck, Building2, DollarSign, AlertCircle,  MapPin, Mail, Phone,Facebook, Twitter, Instagram,Linkedin,Youtube,Send,ChevronRight,FileCheck,  FlaskConical, 
+  Handshake,  Leaf, Calendar,MessageSquare} from 'lucide-react';
+ 
+
+  
 
   const highlights = [
     {
@@ -203,4 +205,145 @@ import { Sprout, Clock, TrendingUp, Globe2 ,  Users,  Package, Store, Truck, Bui
       { icon: Youtube, href: "#", color: "hover:text-green-500" }
     ];
 
-  export {highlights,investmentData, markets, socialLinks, services,quickLinks  }
+    //why choose us 
+
+    const reasons = [
+    {
+      icon: Sprout,
+      title: 'Structured Farming Model',
+      description: 'We follow a planned cultivation approach with defined timelines, farming guidance, and quality-focused practices.',
+      gradient: 'from-green-600 to-emerald-600',
+      delay: 0.1
+    },
+    {
+      icon: FileCheck,
+      title: 'Clear Investment Framework',
+      description: 'Our model provides clarity on investment size, crop duration, and market linkage, helping partners understand the process from start to finish.',
+      gradient: 'from-emerald-600 to-teal-600',
+      delay: 0.2
+    },
+    {
+      icon: Globe2,
+      title: 'Domestic & Export Market Access',
+      description: 'We balance domestic demand with international export channels, reducing dependency on a single market.',
+      gradient: 'from-teal-600 to-green-700',
+      delay: 0.3
+    },
+    {
+      icon: FlaskConical,
+      title: 'Focus on Quality & Standards',
+      description: 'Emphasis on harvest quality, grading, and handling to meet both domestic and export market expectations.',
+      gradient: 'from-green-700 to-lime-600',
+      delay: 0.4
+    },
+    {
+      icon: Handshake,
+      title: 'End-to-End Support',
+      description: 'From cultivation planning to post-harvest handling and market supply, support is provided across all stages.',
+      gradient: 'from-lime-600 to-green-600',
+      delay: 0.5
+    },
+    {
+      icon: TrendingUp,
+      title: 'Market-Linked Approach',
+      description: 'Returns are linked to real market conditions, ensuring transparency and realistic expectations.',
+      gradient: 'from-green-600 to-emerald-700',
+      delay: 0.6
+    }
+  ];
+
+  // about us 
+
+   const productImages = [
+      {
+        src: '/images/suran-hand.png', 
+        alt: 'Quality Suran Product',
+        title: 'Premium Quality'
+      },
+      {
+        src: '/images/harvested-suran.png', 
+        alt: 'Fresh Harvest',
+        title: 'Export Grade'
+      },
+      {
+        src: '/images/suran-plant.png', 
+        alt: 'Growing Suran',
+        title: 'Sustainable Farming'
+      }
+    ];
+  
+    const approachPoints = [
+  {
+    title: "Planned cultivation practices",
+    icon: Sprout,
+    color: "from-green-500 to-emerald-500"
+  },
+  {
+    title: "Defined crop cycle and timelines",
+    icon: Calendar,
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    title: "Quality-focused harvesting and handling",
+    icon: Package,
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+    title: "Balanced domestic and export market access",
+    icon: TrendingUp,
+    color: "from-orange-500 to-red-500"
+  },
+  {
+    title: "Clear communication at every stage",
+    icon: MessageSquare,
+    color: "from-teal-500 to-green-500"
+  }
+];
+    const businessSteps = [
+        {
+          number: '01',
+          title: 'Planning & Participation',
+          description: 'Participation begins with a clearly defined investment and crop plan per acre.',
+          icon: Target
+        },
+        {
+          number: '02',
+          title: 'Cultivation Guidance',
+          description: 'Suran cultivation is carried out using planned agricultural practices with guidance during the crop cycle.',
+          icon: Sprout
+        },
+        {
+          number: '03',
+          title: 'Crop Monitoring',
+          description: 'The crop is monitored during the 9–12 month cycle to support healthy growth and quality outcomes.',
+          icon: Clock
+        },
+        {
+          number: '04',
+          title: 'Harvest & Quality Handling',
+          description: 'At maturity, suran is harvested and graded to meet domestic and export market requirements.',
+          icon: CheckCircle2
+        },
+        {
+          number: '05',
+          title: 'Market Supply',
+          description: 'Produce is supplied to domestic markets in India and international export markets such as the UAE.',
+          icon: Globe2
+        },
+        {
+          number: '06',
+          title: 'Market-Linked Outcome',
+          description: 'Returns depend on yield performance, quality, and prevailing market conditions.',
+          icon: TrendingUp
+        }
+      ];
+    
+      const whyItWorks = [
+        { icon: TrendingUp, text: 'Market-linked, not speculative' },
+        { icon: Globe2, text: 'Balanced domestic and export exposure' },
+        { icon: CheckCircle2, text: 'Quality-driven execution' },
+        { icon: Shield, text: 'Transparent process and timelines' },
+        { icon: Leaf, text: 'Long-term agricultural perspective' }
+      ];
+
+  export {highlights,investmentData, markets, socialLinks, services,quickLinks, reasons, productImages, approachPoints , businessSteps, whyItWorks }
