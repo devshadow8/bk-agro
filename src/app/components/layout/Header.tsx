@@ -9,9 +9,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IconMenu, IconX, IconChevronDown } from "@tabler/icons-react";
 
 const servicesDropdown = [
-  { name: "Agricultural Solutions", link: "/services/agricultural-solutions" },
-  { name: "Crop Management", link: "/services/crop-management" },
-  { name: "Consulting Services", link: "/services/consulting" },
+  { name: "AgriCultural Planning", link: "/services/agricultural-planning" },
+  { name: "Crop Management", link: "/services/crop_management" },
+  { name: "Quality Management", link: "/services/quality-management" },
+  { name: "Post Harvest handling", link: "/services/post-harvest" },
+  { name: "Market & Export Support", link: "/services/market-export" },
+  { name: "Consulting & Business Support", link: "/services/consultant" },
 ];
 
 const navItems = [
@@ -19,6 +22,7 @@ const navItems = [
   { name: "About BK-Agro", link: "/about-us" },
   { name: "Business", link: "/business" },
   { name: "Services", link: "/services", dropdown: servicesDropdown },
+  { name: "Export", link: "/export" }
 ];
 
 const particlePositions = [

@@ -131,7 +131,7 @@ const WhatWeDo = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.7 }}
             >
-              <Link href="/about">
+              <Link href="/about-us">
                 <motion.button
                   whileHover={{ x: 5 }}
                   className="group inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:shadow-green-500/30 transition-all duration-300"

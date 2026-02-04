@@ -11,6 +11,7 @@ import {
   Package,
   ArrowRight 
 } from 'lucide-react';
+import Link from "next/link"
 
 const ServicesGrid = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -212,6 +213,8 @@ const ServicesGrid = () => {
 
           {/* Dots Indicator */}
           <div className="flex justify-center gap-2 mt-8">
+            <Link href= "/services">
+
             {Array.from({ length: maxIndex + 1 }).map((_, index) => (
               <button
                 key={index}
@@ -223,8 +226,11 @@ const ServicesGrid = () => {
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
+            
             ))}
+            </Link>
           </div>
+            
         </div>
 
         {/* View All Services Button */}

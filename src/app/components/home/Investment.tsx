@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, Clock, DollarSign, Globe2, AlertCircle } from 'lucide-react';
 import {investmentData} from "../../utils/data"
-
+import Link from "next/link"
 const InvestmentSnapshot = () => {
  
   return (
@@ -216,7 +216,8 @@ const InvestmentSnapshot = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16 text-center"
-        >
+        >   
+        <Link href= "/">
           <motion.button
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
@@ -230,6 +231,7 @@ const InvestmentSnapshot = () => {
               →
             </motion.span>
           </motion.button>
+          </Link>
           
           <p className="mt-4 text-sm text-gray-500">
             Get detailed information about our investment process

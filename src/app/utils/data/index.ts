@@ -1,11 +1,10 @@
 
 import { Sprout, Clock, TrendingUp, Globe2 , CheckCircle2, Target,ArrowRight, Shield,
    Users,  Package, Store, Truck, Building2, DollarSign, AlertCircle,  MapPin, Mail, Phone,Facebook, Twitter, Instagram,Linkedin,Youtube,Send,ChevronRight,FileCheck,  FlaskConical, 
-  Handshake,  Leaf, Calendar,MessageSquare} from 'lucide-react';
+  Handshake,  Leaf, Calendar,MessageSquare , Globe, IndianRupee,BarChart3,} from 'lucide-react';
+ // import { MessageSquare, Users, FileText, TrendingUp, CheckCircle2, AlertCircle, ArrowRight, Lightbulb, Shield, Target } from 'lucide-react';
+
  
-
-  
-
   const highlights = [
     {
       icon: Sprout,
@@ -184,17 +183,21 @@ import { Sprout, Clock, TrendingUp, Globe2 , CheckCircle2, Target,ArrowRight, Sh
 
    const quickLinks = [
       { name: "Home", href: "/" },
-      { name: "About BK-Agro", href: "/about-bk-agro" },
+      { name: "About BK-Agro", href: "/about-us" },
       { name: "Business", href: "/business" },
+      { name: "Services", href: "/services" },
+      { name: "Export", href: "/export" },
       { name: "Contact", href: "/contact" }
     ];
   
     const services = [
-      { name: "Agricultural Solutions", href: "/services/agricultural-solutions" },
-      { name: "Crop Management", href: "/services/crop-management" },
-      { name: "Consulting Services", href: "/services/consulting" },
-      { name: "Organic Farming", href: "/services/organic-farming" },
-      { name: "Sustainable Agriculture", href: "/services/sustainable" }
+      { name: "Agricultural Planning", href: "/services/agricultural-planning" },
+      { name: "Crop Management", href: "/services/crop_management" },
+      { name: "Quality Management", href: "/services/quality-management" },
+      { name: "Market Export Support", href: "/services/market-export" },
+      { name: "Post Harvest handling", href: "/services/post-harvest" },
+      { name: "Consulting & Business Support", href: "/services/consultant" },
+
     ];
   
     const socialLinks = [
@@ -346,4 +349,118 @@ import { Sprout, Clock, TrendingUp, Globe2 , CheckCircle2, Target,ArrowRight, Sh
         { icon: Leaf, text: 'Long-term agricultural perspective' }
       ];
 
-  export {highlights,investmentData, markets, socialLinks, services,quickLinks, reasons, productImages, approachPoints , businessSteps, whyItWorks }
+
+      // Process Steps Data
+const processSteps = [
+  {
+    number: "01",
+    title: "Participation & Planning",
+    description: "Participation begins with a clearly defined plan per acre, aligned with the suran crop cycle and operational timeline.",
+    icon: Users,
+    color: "from-blue-500 to-cyan-500",
+    delay: 0.1
+  },
+  {
+    number: "02",
+    title: "Cultivation Guidance",
+    description: "Suran cultivation is carried out using planned agricultural practices, with guidance provided throughout the crop cycle.",
+    icon: Sprout,
+    color: "from-green-500 to-emerald-500",
+    delay: 0.2
+  },
+  {
+    number: "03",
+    title: "Crop Growth & Monitoring",
+    description: "The crop follows a 9–12 month growth cycle, during which regular monitoring supports healthy development and quality outcomes.",
+    icon: BarChart3,
+    color: "from-purple-500 to-pink-500",
+    delay: 0.3
+  },
+  {
+    number: "04",
+    title: "Harvest & Quality Handling",
+    description: "At maturity, suran is harvested and graded to meet domestic and export market quality standards.",
+    icon: Package,
+    color: "from-orange-500 to-red-500",
+    delay: 0.4
+  },
+  {
+    number: "05",
+    title: "Market Supply & Distribution",
+    description: "Produce is supplied through domestic markets in India (primarily Maharashtra) and international export markets (UAE).",
+    icon: Globe,
+    color: "from-teal-500 to-green-500",
+    delay: 0.5
+  },
+  {
+    number: "06",
+    title: "Market-Linked Outcome",
+    description: "Outcomes depend on yield performance, quality, and prevailing market prices. Results may vary.",
+    icon: TrendingUp,
+    color: "from-indigo-500 to-purple-500",
+    delay: 0.6
+  }
+];
+
+const investmentHighlights = [
+  { icon: IndianRupee, label: "Investment Size", value: "₹2.5 Lakhs per Acre", color: "text-blue-600" },
+  { icon: Clock, label: "Crop Duration", value: "9–12 Months", color: "text-green-600" },
+  { icon: TrendingUp, label: "Return Potential", value: "Up to ₹5 Lakhs per Acre*", color: "text-purple-600" },
+  { icon: Globe, label: "Market Type", value: "Domestic & Export", color: "text-orange-600" }
+];
+
+const marketRegions = [
+  {
+    flag: "🇮🇳",
+    title: "Domestic Market – India",
+    description: "Primary focus on Maharashtra, covering key regions such as Mumbai, Pune, Nashik, and Nagpur, where suran has strong consumption and wholesale demand.",
+    regions: ["Mumbai", "Pune", "Nashik", "Nagpur"],
+    color: "from-orange-500 to-green-500"
+  },
+  {
+    flag: "🇦🇪",
+    title: "International Market – UAE",
+    description: "Export supply to the UAE supports demand from Indian and Asian communities through established import and distribution networks.",
+    regions: ["Dubai", "Abu Dhabi", "Sharjah"],
+    color: "from-red-500 to-green-500"
+  }
+];
+
+const modelBenefits = [
+  "Planned cultivation reduces uncertainty",
+  "Balanced domestic and export exposure",
+  "Quality-focused execution",
+  "Transparent process and timelines",
+  "Long-term agricultural approach"
+];
+
+// services/consultant page data 
+
+  
+
+  const benefits = [
+    "Improves understanding of the agricultural business model",
+    "Reduces confusion and misaligned expectations",
+    "Builds confidence through transparency",
+    "Supports informed decision-making"
+  ];
+
+  const consultationSteps = [
+    {
+      step: "1",
+      title: "Initial Understanding",
+      description: "Learn about the complete suran farming business model and process flow"
+    },
+    {
+      step: "2",
+      title: "Deep Dive Discussion",
+      description: "Explore specific areas of interest, responsibilities, and expectations"
+    },
+    {
+      step: "3",
+      title: "Clarity & Alignment",
+      description: "Address questions and ensure complete understanding before participation"
+    }
+  ];
+  export {highlights,investmentData,processSteps, investmentHighlights, marketRegions, modelBenefits, benefits,consultationSteps
+    , markets, socialLinks, services,quickLinks, reasons, productImages, approachPoints , businessSteps, whyItWorks }

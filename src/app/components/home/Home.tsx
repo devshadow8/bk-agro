@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Play, MessageCircle, ArrowRight, Sparkles, TrendingUp, Clock, Globe2 } from 'lucide-react';
-
+import Link from "next/link"
 const Hero = () => {
   const [isClient, setIsClient] = useState(false);
 
@@ -155,6 +155,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
           >
             {/* Primary CTA */}
+            <Link href= "business">
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
@@ -170,6 +171,7 @@ const Hero = () => {
                 >
                   <ArrowRight className="w-5 h-5" />
                 </motion.span>
+                
               </span>
               <motion.div
                 className="absolute inset-0 bg-white/20"
@@ -183,8 +185,11 @@ const Hero = () => {
                 }}
               />
             </motion.button>
+             </Link>
+           
 
             {/* Secondary CTA */}
+            <Link href="/contact">
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
@@ -196,6 +201,7 @@ const Hero = () => {
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/10 to-green-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </motion.button>
+             </Link>
           </motion.div>
 
           {/* Trust Indicators */}

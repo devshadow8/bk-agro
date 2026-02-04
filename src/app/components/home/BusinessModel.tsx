@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import { TrendingUp, Sprout, Eye, CheckCircle, Globe } from 'lucide-react';
+import Link from "next/link"
 
 const WorkflowSection = () => {
   const steps = [
@@ -296,6 +297,7 @@ const WorkflowSection = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-24">
+          <Link href= "/contact">
           <button 
             className="group relative bg-gradient-to-r from-yellow-400 via-green-500 to-emerald-500 
               hover:from-yellow-300 hover:via-green-400 hover:to-emerald-400
@@ -307,6 +309,7 @@ const WorkflowSection = () => {
             <span className="relative z-10 drop-shadow-lg">Start Your Journey Today</span>
             <div className="absolute inset-0 bg-white/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </button>
+          </Link>
         </div>
       </div>
 
