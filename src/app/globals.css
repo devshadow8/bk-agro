@@ -204,8 +204,6 @@ body {
     
     
         
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600;800&display=swap');
-
         @keyframes float {
           0%, 100% { transform: translate(0, 0) rotate(0deg); }
           33% { transform: translate(30px, -30px) rotate(5deg); }

@@ -2,17 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Sprout, 
-  Leaf, 
-  FlaskConical, 
-  Ship, 
-  Handshake, 
-  Package,
-  ArrowRight 
-} from 'lucide-react';
 import Link from "next/link"
-
+import {service} from "../../utils/data"
+import {  ArrowRight } from 'lucide-react';
 const ServicesGrid = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [cardsPerView, setCardsPerView] = React.useState(3);
@@ -33,58 +25,9 @@ const ServicesGrid = () => {
     return () => window.removeEventListener('resize', updateCardsPerView);
   }, []);
 
-  const services = [
-    {
-      icon: Sprout,
-      title: 'Agricultural Planning',
-      description: 'Structured crop planning with guidance on land preparation, plantation methods, and farming best practices.',
-      color: 'from-green-600 to-emerald-600',
-      bgColor: 'bg-green-50',
-      image: '/images/service1.png'
-    },
-    {
-      icon: Leaf,
-      title: 'Crop Management',
-      description: 'Ongoing support during the crop cycle, including growth monitoring and quality-focused practices.',
-      color: 'from-emerald-600 to-teal-600',
-      bgColor: 'bg-emerald-50',
-      image: '/images/service2.png'
-    },
-    {
-      icon: FlaskConical,
-      title: 'Quality & Harvest Support',
-      description: 'Guidance on harvesting, grading, and handling to meet domestic and export quality standards.',
-      color: 'from-teal-600 to-cyan-600',
-      bgColor: 'bg-teal-50',
-      image: '/images/service3.png'
-    },
-    {
-      icon: Ship,
-      title: 'Market & Export Support',
-      description: 'Access to national buyers and international export channels through an established distribution network.',
-      color: 'from-green-700 to-emerald-700',
-      bgColor: 'bg-green-50',
-      image: '/images/service4.png'
-    },
-    {
-      icon: Handshake,
-      title: 'Consulting & Advisory',
-      description: 'Expert consultation to help partners understand the farming process, timelines, and market flow.',
-      color: 'from-emerald-700 to-green-700',
-      bgColor: 'bg-emerald-50',
-      image: '/images/service5.png'
-    },
-    {
-      icon: Package,
-      title: 'Post-Harvest Assistance',
-      description: 'Support for storage, packaging, and logistics to ensure produce reaches markets in good condition.',
-      color: 'from-green-600 to-lime-600',
-      bgColor: 'bg-lime-50',
-      image: '/images/service6.png'
-    }
-  ];
+ 
 
-  const maxIndex = Math.max(0, services.length - cardsPerView);
+  const maxIndex = Math.max(0, service.length - cardsPerView);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
@@ -158,7 +101,7 @@ const ServicesGrid = () => {
               }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
-              {services.map((service, index) => {
+              {service.map((service, index) => {
                 const Icon = service.icon;
                 return (
                   <motion.div

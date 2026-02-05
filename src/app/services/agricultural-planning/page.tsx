@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-
+import Link from 'next/link';
 export default function AgriculturalPlanningPage() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -65,13 +65,17 @@ export default function AgriculturalPlanningPage() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link href = "/contact">
               <button className="group relative px-8 py-4 bg-[#5a7c3e] text-white rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                 <span className="relative z-10 font-semibold text-lg">Start Planning</span>
                 <div className="absolute inset-0 bg-[#2d3e1f] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
               </button>
+              </Link>
+              <Link href = "/">
               <button className="px-8 py-4 border-2 border-[#5a7c3e] text-[#5a7c3e] rounded-full font-semibold text-lg hover:bg-[#5a7c3e] hover:text-white transition-all duration-300 hover:scale-105">
                 Learn More
               </button>
+              </Link>
             </div>
           </div>
 
@@ -108,7 +112,7 @@ export default function AgriculturalPlanningPage() {
       <section className="relative py-24 px-6 bg-gradient-to-b from-[#e8f5e3] to-[#d8ecd1]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-block px-6 py-2 bg-[#5a7c3e] text-white rounded-full text-sm font-semibold mb-4 animate-pulse-slow">
+            <div className="inline-block px-6 py-2 bg-[#3e790e] text-white rounded-full text-md font-semibold mb-4 animate-pulse-slow">
               CORE SERVICES
             </div>
             <h2 className="text-6xl font-bold text-[#2d3e1f] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
@@ -173,27 +177,7 @@ export default function AgriculturalPlanningPage() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Important Note Section */}
-      <section className="relative py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-amber-50 border-l-4 border-amber-500 rounded-2xl p-8 shadow-lg">
-            <div className="flex items-start gap-4">
-              <div className="text-4xl">⚠️</div>
-              <div>
-                <h3 className="text-2xl font-bold text-amber-900 mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                  Important Note
-                </h3>
-                <p className="text-lg text-amber-800" style={{ fontFamily: 'Lora, serif' }}>
-                  This service provides planning and guidance support. Actual farming outcomes depend on land conditions, climate, and execution practices.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      </section>  
       {/* CTA Section */}
       <section className="relative py-24 px-6 bg-[#2d3e1f]">
         <div className="max-w-4xl mx-auto text-center">
@@ -204,13 +188,17 @@ export default function AgriculturalPlanningPage() {
             To understand how this service fits into the overall business model, explore our full services or contact us for more details.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="/services">
             <button className="group relative px-10 py-5 bg-white text-[#2d3e1f] rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
               <span className="relative z-10 font-bold text-lg">Explore All Services</span>
               <div className="absolute inset-0 bg-[#9fbd6f] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
             </button>
+            </Link>
+             <Link href= "/contact">
             <button className="px-10 py-5 border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-[#2d3e1f] transition-all duration-300 hover:scale-105">
               Contact Us
             </button>
+            </Link>
           </div>
         </div>
       </section>

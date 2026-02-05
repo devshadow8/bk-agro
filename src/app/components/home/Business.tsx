@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import {  MapPin,  Globe2,  TrendingUp,  Users,  Package, Store, Truck, Building2} from 'lucide-react';
+import {  MapPin,  Globe2,  TrendingUp,Package, } from 'lucide-react';
 import { markets } from '../../utils/data';
 
 const MarketCoverage = () => {

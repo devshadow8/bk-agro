@@ -1,13 +1,20 @@
 "use client"
 
-import React from 'react';
+import React, {useState} from 'react';
 import { motion } from 'framer-motion';
-import { Sprout, CheckCircle2, Target, TrendingUp, Globe2, Leaf, ArrowRight, Shield, Clock } from 'lucide-react';
+import { Sprout, CheckCircle2, Target, TrendingUp, Globe2, Leaf, ArrowRight, Shield, Handshake, Users, Calendar, Package  } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import {productImages, approachPoints , businessSteps, whyItWorks} from "../utils/data"
+import {productImages, approachPoints, whyItWorks, businessStep} from "../utils/data"
 
 const AboutPage = () => {
+const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
+
+
+
+  const toggleFlip = (index: number) => {
+    setFlippedIndex(flippedIndex === index ? null : index);
+  };
  
   return (
     <div className="py-20">
@@ -61,8 +68,6 @@ const AboutPage = () => {
 
   
 </section>
-
-
       {/* 2. ABOUT INTRO */}
     <section className="relative py-20 bg-gradient-to-b from-white to-green-50/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -145,7 +150,7 @@ const AboutPage = () => {
 
               <div className="relative h-[180px] rounded-xl overflow-hidden shadow-md">
                 <Image
-                  src="/images/about-suran.png"
+                  src="/images/suran-about-img2.jpeg"
                   alt="Elephant foot yam produce"
                   fill
                   className="object-cover"
@@ -157,8 +162,6 @@ const AboutPage = () => {
         </div>
       </div>
     </section>
-
-
       {/* 3. WHAT WE DO */}
       <section className="relative py-20 bg-white overflow-hidden">
         {/* Decorative Elements */}
@@ -434,96 +437,193 @@ const AboutPage = () => {
       </div>
     </section>
       {/* 5. OUR BUSINESS MODEL */}
-      <section className="relative py-20 bg-gradient-to-b from-white via-green-50/50 to-white overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+    <section className="relative py-20 bg-gradient-to-b from-white via-green-50/50 to-white overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-              Our Business{' '}
-              <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-                Model
-              </span>
-            </h2>
-            <div className="w-20 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600">How the Model Works</p>
-          </motion.div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+            Our Business{' '}
+            <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+              Model
+            </span>
+          </h2>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mx-auto mb-6"></div>
+          <p className="text-xl text-gray-600">How the Model Works</p>
+        </motion.div>
 
-          {/* Business Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {businessSteps.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative group"
+        {/* Flippable Business Steps */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {businessStep.map((step, index) => {
+            const Icon = step.icon;
+            const isFlipped = flippedIndex === index;
+
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative cursor-pointer h-full min-h-[280px]"
+                onClick={() => toggleFlip(index)}
+                style={{ perspective: "1200px" }}
+              >
+                <div
+                  className="relative h-full transition-transform duration-700"
+                  style={{
+                    transformStyle: "preserve-3d",
+                    transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
+                  }}
                 >
-                  <div className="relative h-full bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                  {/* FRONT CARD - English */}
+                  <div
+                    className="absolute inset-0 bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+                    style={{ backfaceVisibility: "hidden" }}
+                  >
                     {/* Step Number */}
                     <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl flex items-center justify-center text-white font-black text-lg shadow-lg">
                       {step.number}
                     </div>
 
                     {/* Icon */}
-                    <div className="w-16 h-16 bg-green-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-100 transition-colors">
-                      <Icon className="w-8 h-8 text-green-600" />
+                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${step.gradient} flex items-center justify-center mb-6 shadow-lg`}>
+                      <Icon className="w-8 h-8 text-white" />
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
                       {step.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-sm text-gray-600 leading-relaxed mb-6">
                       {step.description}
                     </p>
 
+                    {/* Flip Indicator */}
+                    <div className="absolute bottom-6 left-8 right-8">
+                      <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <p className="text-xs font-semibold text-green-600">
+                          Tap for Marathi
+                        </p>
+                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
+                          <svg
+                            className="w-3 h-3 text-green-600"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+
                     {/* Bottom Accent */}
-                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-600 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-2xl"></div>
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-b-2xl"></div>
                   </div>
 
-                  {/* Arrow Connector (except last in row) */}
-                  {index % 3 !== 2 && index !== businessSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 text-green-400">
-                      <ArrowRight className="w-8 h-8" />
+                  {/* BACK CARD - Marathi */}
+                  <div
+                    className="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl p-8 shadow-lg"
+                    style={{
+                      backfaceVisibility: "hidden",
+                      transform: "rotateY(180deg)",
+                    }}
+                  >
+                    {/* Step Number */}
+                    <div className="absolute -top-4 -right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-white font-black text-lg shadow-lg border border-white/30">
+                      {step.number}
                     </div>
-                  )}
-                </motion.div>
-              );
-            })}
-          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mt-16"
-          >
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl max-w-4xl mx-auto">
-              <Image
-                src="/images/export-port.png" 
-                alt="BK-Agro Supply Chain"
-                fill
-                className="object-contain bg-gray-50"
-              />
-            </div>
-          </motion.div>
+                    {/* Icon */}
+                    <div className="w-16 h-16 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-6 shadow-lg border border-white/30">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-white mb-3 leading-tight">
+                      {step.titleMr}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-sm text-white/90 leading-relaxed mb-6">
+                      {step.descriptionMr}
+                    </p>
+
+                    {/* Flip Indicator */}
+                    <div className="absolute bottom-6 left-8 right-8">
+                      <div className="flex items-center justify-between pt-4 border-t border-white/20">
+                        <p className="text-xs font-semibold text-white">
+                          Tap to go back
+                        </p>
+                        <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
+                          <svg
+                            className="w-3 h-3 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M15 19l-7-7 7-7"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Bottom Accent */}
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/30 rounded-b-2xl"></div>
+                  </div>
+                </div>
+
+                {/* Arrow Connector (except last in row) */}
+                {index % 3 !== 2 && index !== businessStep.length - 1 && (
+                  <div className="hidden lg:block absolute top-1/2 -right-4 text-green-400 z-20">
+                    <ArrowRight className="w-8 h-8" />
+                  </div>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
-      </section>
 
+        {/* Supply Chain Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-16"
+        >
+          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl max-w-4xl mx-auto border-4 border-white">
+            <Image
+              src="/images/supplyChain.png" 
+              alt="BK-Agro Supply Chain"
+              fill
+              className="object-full bg-gray-50"
+            />
+          </div>
+        </motion.div>
+      </div>
+    </section>
+      
       {/* 6. MARKET FOCUS */}
       <section className="relative py-20 bg-gradient-to-b from-white to-green-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -706,18 +806,6 @@ const AboutPage = () => {
           </motion.div>
         </div>
       </section>
-
-      <style jsx>{`
-        @keyframes gradient-shift {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-
-        .animate-gradient-shift {
-          background-size: 200% 200%;
-          animation: gradient-shift 10s ease infinite;
-        }
-      `}</style>
     </div>
   );
 };

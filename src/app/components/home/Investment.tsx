@@ -104,7 +104,7 @@ const InvestmentSnapshot = () => {
             })}
 
             {/* Disclaimer */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -120,7 +120,7 @@ const InvestmentSnapshot = () => {
                   Agricultural investments are subject to farming and market-related risks.
                 </p>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* RIGHT COLUMN - Image */}

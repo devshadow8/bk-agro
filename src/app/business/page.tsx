@@ -28,7 +28,7 @@ export default function BusinessModelPage() {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 z-10" />
           <Image
-            src="/images/model-banner.png"
+            src="/images/suran-sec2-img2.jpeg"
             alt="Suran Farming"
             fill
             className="object-cover"
@@ -189,7 +189,7 @@ export default function BusinessModelPage() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/modeloverView.png"
+                  src="/images/business/businessimg2.jpeg"
                   alt="Structured Farming Process"
                   width={600}
                   height={500}
@@ -216,7 +216,7 @@ export default function BusinessModelPage() {
                     <Calendar className="w-6 h-6 text-green-600" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-gray-900">9-12</p>
+                    <p className="text-2xl font-bold text-gray-900">12</p>
                     <p className="text-sm text-gray-600">Month Cycle</p>
                   </div>
                 </div>
@@ -370,7 +370,7 @@ export default function BusinessModelPage() {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/harvestQuality.png"
+                  src="/images/business/harvestQuality.png"
                   alt="Quality Harvest Process"
                   width={1200}
                   height={600}
@@ -562,28 +562,6 @@ export default function BusinessModelPage() {
           </div>
         </div>
       </section>
-
-      {/* Risk & Disclaimer */}
-      <section className="py-16 bg-amber-50 border-y border-amber-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md border-l-4 border-amber-500"
-          >
-            <AlertCircle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
-            <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Important Disclaimer</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Agriculture involves natural and market-related risks. Returns are not guaranteed 
-                and may vary due to climatic, biological, and market conditions.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <section className="py-24 bg-gradient-to-br from-gray-900 via-green-900 to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">

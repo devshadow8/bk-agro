@@ -1,41 +1,10 @@
 "use client"
 import React from 'react';
-import { TrendingUp, Sprout, Eye, CheckCircle, Globe } from 'lucide-react';
 import Link from "next/link"
+import {steps} from "../../utils/data"
 
 const WorkflowSection = () => {
-  const steps = [
-    {
-      number: 1,
-      title: "Invest / Partner",
-      description: "Start with a planned investment per acre.",
-      icon: TrendingUp,
-    },
-    {
-      number: 2,
-      title: "Cultivation Planning",
-      description: "We guide suran cultivation using best practices.",
-      icon: Sprout,
-    },
-    {
-      number: 3,
-      title: "Crop Growth & Monitoring",
-      description: "Regular monitoring during the 9–12 month cycle.",
-      icon: Eye,
-    },
-    {
-      number: 4,
-      title: "Harvest & Quality Check",
-      description: "Produce is harvested and graded for market readiness.",
-      icon: CheckCircle,
-    },
-    {
-      number: 5,
-      title: "Market & Export",
-      description: "Supply to domestic buyers and export markets.",
-      icon: Globe,
-    }
-  ];
+  
 
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900 overflow-hidden relative min-h-screen">

@@ -2,15 +2,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Sprout, Clock, TrendingUp, Globe2 } from "lucide-react";
+import { Sprout, TrendingUp } from "lucide-react";
 import { highlights } from "../../utils/data";
 
 const Highlights = () => {
-  
-
   return (
     <section className="relative py-20 bg-gradient-to-b from-white via-green-50/30 to-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -26,7 +25,7 @@ const Highlights = () => {
               BK-Agro
             </span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-900 max-w-2xl mx-auto">
             Transparent, structured, and growth-focused agricultural investment
             opportunities
           </p>
@@ -57,38 +56,52 @@ const Highlights = () => {
                     }}
                   />
 
-                  {/* Dark Overlay for readability */}
+                  {/* Overlay */}
                   <div className="absolute inset-0 bg-black/10" />
 
                   {/* Content */}
-                  <div className="relative p-8 flex flex-col items-center text-center h-full">
+                  <div className="relative p-8 flex flex-col items-center text-gray-900 text-center h-full">
+                    
+                    {/* Icon */}
                     <motion.div
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6, type: "spring" }}
                       className={`w-20 h-20 ${highlight.bgColor} rounded-2xl flex items-center justify-center mb-6`}
                     >
-                      <Icon
-                        className={`w-10 h-10 ${highlight.iconColor}`}
-                      />
+                      <Icon className={`w-10 h-10 ${highlight.iconColor}`} />
                     </motion.div>
 
+                    {/* Value */}
                     <h3
-                      className={`text-3xl font-black bg-gradient-to-r ${highlight.color} bg-clip-text text-transparent`}
+                      className={`text-3xl font-black  text-gray-900 bg-gradient-to-r ${highlight.color} bg-clip-text text-transparent`}
                     >
                       {highlight.value}
                     </h3>
-                    <p className="text-sm font-semibold text-gray-700 mb-3">
+                    <p className="text-sm font-semibold text-gray-900 mb-3">
                       {highlight.unit}
                     </p>
 
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">
+                    {/* English Title */}
+                    <h4 className="text-xl font-bold text-gray-900">
                       {highlight.title}
                     </h4>
 
-                    <p className="text-sm text-gray-700 leading-relaxed flex-grow">
+                    {/* English Description */}
+                    <p className="text-sm font-bold text-gray-900 leading-relaxed mt-2">
                       {highlight.description}
                     </p>
 
+                    {/* Marathi Title */}
+                    <h5 className="text-base font-semibold text-gray-900 mt-4">
+                      {highlight.titleMr}
+                    </h5>
+
+                    {/* Marathi Description */}
+                    <p className="text-sm font-bold text-gray-900 leading-relaxed mt-1 flex-grow">
+                      {highlight.descriptionMr}
+                    </p>
+
+                    {/* Bottom Gradient */}
                     <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-green-400 to-transparent" />
                   </div>
                 </div>

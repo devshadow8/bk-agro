@@ -13,8 +13,8 @@ const Hero = () => {
   }, []);
 
   const highlights = [
-    { icon: Clock, text: '9–12 month crop cycle' },
-    { icon: TrendingUp, text: 'Market-linked returns' },
+    { icon: Clock, text: '12 month crop cycle' },
+    { icon: TrendingUp, text: 'Fixed returns' },
     { icon: Globe2, text: 'Export-grade produce' }
   ];
 
