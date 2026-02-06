@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Sprout, Calendar, TrendingUp, Package, Globe, IndianRupee,CheckCircle2,ArrowRight,Clock,MapPin,AlertCircle,Target,Users,BarChart3,Leaf, Shield} from 'lucide-react';
+import { Sprout, Calendar, Package, Globe,CheckCircle2,ArrowRight,MapPin,AlertCircle,Target,BarChart3,Leaf, Shield} from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {processSteps, investmentHighlights, marketRegions, modelBenefits} from "../utils/data"
@@ -107,7 +107,7 @@ export default function BusinessModelPage() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-10 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -132,7 +132,7 @@ export default function BusinessModelPage() {
       </section>
 
       {/* Model Overview with Image */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -227,7 +227,7 @@ export default function BusinessModelPage() {
       </section>
 
       {/* How The Business Model Works - Interactive Timeline */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      <section className="py-10 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
@@ -388,7 +388,7 @@ export default function BusinessModelPage() {
       </section>
 
       {/* Investment Snapshot - Interactive Cards */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+      <section className="py-10 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -461,7 +461,7 @@ export default function BusinessModelPage() {
       </section>
 
       {/* Market Focus - Geographic Cards */}
-      <section className="py-24 bg-white">
+      <section className="py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -526,7 +526,7 @@ export default function BusinessModelPage() {
       </section>
 
       {/* Why This Model is Structured */}
-      <section className="py-20 bg-gradient-to-b from-green-50/30 to-white">
+      <section className="py-10 bg-gradient-to-b from-green-50/30 to-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -563,7 +563,7 @@ export default function BusinessModelPage() {
         </div>
       </section>
       {/* Final CTA */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-green-900 to-gray-900 relative overflow-hidden">
+      <section className="py-10 bg-gradient-to-br from-gray-900 via-green-900 to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <Image
             src="/images/farming-pattern.jpg"

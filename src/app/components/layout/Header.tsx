@@ -195,7 +195,6 @@ export default function NavigationBar() {
                             >
                               <Link
                                 href={sub.link}
-                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="block px-4 py-3 rounded-lg text-green-50 hover:text-white hover:bg-green-800/60 transition-all duration-300 group relative overflow-hidden"
                               >
@@ -226,7 +225,7 @@ export default function NavigationBar() {
               >
                 <Link
                   href={item.link}
-                  target={newTab ? "_blank" : undefined}
+                  // target={newTab ? "_blank" : undefined}
                   rel={newTab ? "noopener noreferrer" : undefined}
                   className="text-green-50 hover:text-white font-semibold px-4 py-2.5 rounded-lg hover:bg-green-800/50 transition-all duration-300 relative overflow-hidden group inline-block"
                 >
@@ -384,7 +383,7 @@ export default function NavigationBar() {
                               >
                                 <Link
                                   href={sub.link}
-                                  target="_blank"
+                                  // target="_blank"
                                   rel="noopener noreferrer"
                                   onClick={closeMobileMenu}
                                   className="block text-green-100 hover:text-white py-2 px-3 rounded-lg hover:bg-green-800/40 transition-all"
@@ -409,7 +408,7 @@ export default function NavigationBar() {
                   >
                     <Link
                       href={item.link}
-                      target={newTab ? "_blank" : undefined}
+                      // target={newTab ? "_blank" : undefined}
                       rel={newTab ? "noopener noreferrer" : undefined}
                       onClick={closeMobileMenu}
                       className="block text-green-50 hover:text-white font-semibold px-3 py-2 rounded-lg hover:bg-green-800/50 transition-all"

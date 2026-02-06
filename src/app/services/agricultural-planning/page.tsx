@@ -22,7 +22,7 @@ export default function AgriculturalPlanningPage() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-[#e8f5e3] via-[#f0f7ed] to-[#e1f0dc] overflow-hidden py-20">
+    <div className="relative min-h-screen bg-gradient-to-br from-[#1a3a1a] via-[#2d5a2d] to-[#1a4a1a] overflow-hidden py-20">
       {/* Scroll Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-[#d4e8cf] z-50">
         <div 
@@ -89,7 +89,7 @@ export default function AgriculturalPlanningPage() {
       </section>
 
       {/* Overview Section */}
-      <section className="relative py-24 px-6">
+      <section className="relative py-8 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="bg-white rounded-3xl shadow-2xl p-12 md:p-16 border-2 border-[#c8e0c0] transform hover:scale-[1.02] transition-all duration-500">
             <div className="flex items-center gap-4 mb-8">
@@ -109,7 +109,7 @@ export default function AgriculturalPlanningPage() {
       </section>
 
       {/* What This Service Covers */}
-      <section className="relative py-24 px-6 bg-gradient-to-b from-[#e8f5e3] to-[#d8ecd1]">
+      <section className="relative py-10 px-6 bg-gradient-to-b from-[#e8f5e3] to-[#d8ecd1]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block px-6 py-2 bg-[#3e790e] text-white rounded-full text-md font-semibold mb-4 animate-pulse-slow">
@@ -155,7 +155,7 @@ export default function AgriculturalPlanningPage() {
       </section>
 
       {/* Why It Matters Section */}
-      <section className="relative py-24 px-6">
+      <section className="relative py-12 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="bg-gradient-to-br from-[#5a7c3e] to-[#7a9d54] rounded-3xl shadow-2xl p-12 md:p-16 text-white relative overflow-hidden">
             {/* Decorative Pattern */}
@@ -179,7 +179,7 @@ export default function AgriculturalPlanningPage() {
         </div>
       </section>  
       {/* CTA Section */}
-      <section className="relative py-24 px-6 bg-[#2d3e1f]">
+      <section className="relative py-10 px-6 bg-[#2d3e1f] ">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
             Ready to Start Planning?

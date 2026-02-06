@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import { Truck, Globe, Package, TrendingUp, MapPin, Ship, ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react';
 import Image from "next/image"
+import Link from 'next/link';
 export default function MarketExportSupport() {
   const [isVisible, setIsVisible] = useState(false);
   // const [activeTab, setActiveTab] = useState(0);
@@ -67,20 +68,24 @@ export default function MarketExportSupport() {
             </p>
 
             <div className="flex flex-wrap gap-4">
+              <Link href="/">
               <button className="group px-8 py-4 bg-gradient-to-r from-emerald-500 to-green-600 rounded-full font-semibold flex items-center gap-2 hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105">
                 Get Started
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
+              </Link>
+              <Link href="/contact">
               <button className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
                 Contact Us
               </button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* Overview Section */}
-      <section className="relative py-20 px-6 md:px-12">
+      <section className="relative py-8 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className={`transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="bg-gradient-to-br from-emerald-900/40 to-green-900/40 backdrop-blur-xl border border-emerald-500/20 rounded-3xl p-8 md:p-12 shadow-2xl">
@@ -97,7 +102,7 @@ export default function MarketExportSupport() {
       </section>
 
       {/* Services Section */}
-      <section className="relative py-20 px-6 md:px-12">
+      <section className="relative py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className={`transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">
@@ -136,7 +141,7 @@ export default function MarketExportSupport() {
       </section>
 
       {/* Benefits Section */}
-      <section className="relative py-20 px-6 md:px-12">
+      <section className="relative py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className={`transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="bg-gradient-to-br from-green-900/40 to-emerald-900/40 backdrop-blur-xl border border-green-500/20 rounded-3xl p-8 md:p-12 shadow-2xl">
@@ -165,7 +170,7 @@ export default function MarketExportSupport() {
       </section>
 
       {/* Image Gallery Section */}
-<section className="relative py-20 px-6 md:px-12">
+<section className="relative py-10 px-6 md:px-12">
   <div className="max-w-7xl mx-auto">
     <div className={`transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
       <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-emerald-300">
@@ -221,29 +226,8 @@ export default function MarketExportSupport() {
   </div>
 </section>
 
-      {/* Important Note Section */}
-      <section className="relative py-20 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
-          <div className={`transform transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <div className="bg-gradient-to-br from-amber-900/30 to-orange-900/30 backdrop-blur-xl border border-amber-500/30 rounded-3xl p-8 md:p-12 shadow-2xl">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/50">
-                  <AlertCircle className="w-6 h-6" />
-                </div>
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-bold mb-4 text-amber-300">Important Note</h2>
-                  <p className="text-amber-100/90 text-lg leading-relaxed">
-                    Market access and outcomes depend on demand conditions, logistics execution, and regulatory requirements. This service provides coordination and guidance support, and results may vary.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="relative py-32 px-6 md:px-12">
+      <section className="relative py-10 px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center">
           <div className={`transform transition-all duration-1000 delay-800 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">

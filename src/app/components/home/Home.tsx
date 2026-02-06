@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/purity */
-"use client"
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Play, MessageCircle, ArrowRight, Sparkles, TrendingUp, Clock, Globe2 } from 'lucide-react';
-import Link from "next/link"
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Play, MessageCircle, ArrowRight, Sparkles, TrendingUp, Clock, Globe2,} from "lucide-react";
+import Link from "next/link";
 const Hero = () => {
   const [isClient, setIsClient] = useState(false);
 
@@ -13,34 +13,32 @@ const Hero = () => {
   }, []);
 
   const highlights = [
-    { icon: Clock, text: '12 month crop cycle' },
-    { icon: TrendingUp, text: 'Fixed returns' },
-    { icon: Globe2, text: 'Export-grade produce' }
+    { icon: Clock, text: "12 month crop cycle" },
+    { icon: TrendingUp, text: "Fixed returns" },
+    { icon: Globe2, text: "Export-grade produce" },
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-emerald-950 via-green-900 to-emerald-950">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-emerald-950 via-green-900 to-emerald-950 py-20">
       {/* Video Background Container */}
       <div className="absolute inset-0 z-0">
         {/* Replace this div with your video element */}
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/95 via-emerald-900/90 to-green-950/95">
-          
-            {/* Add your video here: */}
-            <video 
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover"
-            >
-              <source src="/video/hero.mp4" type="video/mp4" />
-            </video>
-         
+          {/* Add your video here: */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/video/hero.mp4" type="video/mp4" />
+          </video>
         </div>
-        
+
         {/* Dark Overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
-        
+
         {/* Animated Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 via-emerald-600/20 to-lime-600/20 animate-gradient-shift"></div>
       </div>
@@ -89,7 +87,9 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-6 py-3 flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-green-400 animate-pulse" />
-                <span className="text-sm font-semibold text-white">Premium Agricultural Investment</span>
+                <span className="text-sm font-semibold text-white">
+                  Premium Agricultural Investment
+                </span>
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
               </div>
             </div>
@@ -116,7 +116,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8 leading-relaxed"
           >
-            End-to-end support for suran cultivation with structured investment planning and export-focused market access.
+            End-to-end support for suran cultivation with structured investment
+            planning and export-focused market access.
           </motion.p>
 
           {/* Highlight Pills */}
@@ -140,7 +141,9 @@ const Hero = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 blur-lg opacity-0 group-hover:opacity-50 transition-opacity"></div>
                   <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-full px-5 py-2.5 flex items-center gap-2.5 hover:bg-white/20 transition-all duration-300">
                     <Icon className="w-4 h-4 text-green-400" />
-                    <span className="text-sm font-medium text-white">{item.text}</span>
+                    <span className="text-sm font-medium text-white">
+                      {item.text}
+                    </span>
                   </div>
                 </motion.div>
               );
@@ -155,53 +158,51 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
           >
             {/* Primary CTA */}
-            <Link href= "business">
-            <motion.button
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="group relative px-8 py-4 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white font-bold rounded-xl shadow-2xl hover:shadow-green-500/50 transition-all duration-300 overflow-hidden min-w-[240px]"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 via-teal-600 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative z-10 flex items-center justify-center gap-2 text-lg">
-                <Play className="w-5 h-5" />
-                View Business Model
-                <motion.span
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  <ArrowRight className="w-5 h-5" />
-                </motion.span>
-                
-              </span>
-              <motion.div
-                className="absolute inset-0 bg-white/20"
-                animate={{
-                  x: ["-100%", "100%"],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-              />
-            </motion.button>
-             </Link>
-           
+            <Link href="business">
+              <motion.button
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative px-8 py-4 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white font-bold rounded-xl shadow-2xl hover:shadow-green-500/50 transition-all duration-300 overflow-hidden min-w-[240px]"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 via-teal-600 to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span className="relative z-10 flex items-center justify-center gap-2 text-lg">
+                  <Play className="w-5 h-5" />
+                  View Business Model
+                  <motion.span
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                  </motion.span>
+                </span>
+                <motion.div
+                  className="absolute inset-0 bg-white/20"
+                  animate={{
+                    x: ["-100%", "100%"],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                />
+              </motion.button>
+            </Link>
 
             {/* Secondary CTA */}
             <Link href="/contact">
-            <motion.button
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="group relative px-8 py-4 bg-white/10 backdrop-blur-xl border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/20 hover:border-green-400/50 transition-all duration-300 min-w-[240px]"
-            >
-              <span className="relative z-10 flex items-center justify-center gap-2 text-lg">
-                <MessageCircle className="w-5 h-5 group-hover:text-green-400 transition-colors" />
-                Talk to an Expert
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/10 to-green-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </motion.button>
-             </Link>
+              <motion.button 
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative px-8 py-4 bg-white/10 backdrop-blur-xl border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/20 hover:border-green-400/50 transition-all duration-300 min-w-[240px]"
+              >
+                <span className="relative z-10 flex items-center justify-center gap-2 text-lg">
+                  <MessageCircle className="w-5 h-5 group-hover:text-green-400 transition-colors" />
+                  Talk to an Expert
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/10 to-green-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.button>
+            </Link>
           </motion.div>
 
           {/* Trust Indicators */}
@@ -217,12 +218,18 @@ const Hero = () => {
             </div>
             <div className="hidden sm:block w-px h-4 bg-white/20"></div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+              <div
+                className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"
+                style={{ animationDelay: "0.5s" }}
+              ></div>
               <span>Export Quality Standards</span>
             </div>
             <div className="hidden sm:block w-px h-4 bg-white/20"></div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-lime-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+              <div
+                className="w-2 h-2 bg-lime-400 rounded-full animate-pulse"
+                style={{ animationDelay: "1s" }}
+              ></div>
               <span>Transparent Returns</span>
             </div>
           </motion.div>
@@ -241,7 +248,9 @@ const Hero = () => {
           transition={{ duration: 2, repeat: Infinity }}
           className="flex flex-col items-center gap-2 cursor-pointer group"
         >
-          <span className="text-xs text-gray-400 uppercase tracking-wider">Scroll to explore</span>
+          <span className="text-xs text-gray-400 uppercase tracking-wider">
+            Scroll to explore
+          </span>
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2 group-hover:border-green-400/50 transition-colors">
             <motion.div
               animate={{ y: [0, 12, 0] }}
@@ -254,8 +263,6 @@ const Hero = () => {
 
       {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to to-transparent z-10"></div>
-
-
     </section>
   );
 };

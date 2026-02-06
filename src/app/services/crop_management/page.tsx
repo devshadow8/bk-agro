@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 
 export default function CropManagementPage() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -83,15 +84,19 @@ export default function CropManagementPage() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link href="/contact">
               <button className="group relative px-10 py-5 bg-[#7fb069] text-[#1a3a1a] rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(127,176,105,0.5)]">
                 <span className="relative z-10 font-bold text-lg tracking-wide" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                   GET STARTED
                 </span>
                 <div className="absolute inset-0 bg-[#9dc88d] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
               </button>
+              </Link>
+              <Link href= "/">
               <button className="px-10 py-5 border-2 border-[#7fb069] text-[#7fb069] rounded-lg font-bold text-lg tracking-wide hover:bg-[#7fb069]/20 transition-all duration-300 hover:scale-105" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                 LEARN MORE
               </button>
+              </Link>
             </div>
           </div>
 
@@ -108,7 +113,7 @@ export default function CropManagementPage() {
       </section>
 
       {/* Overview Section */}
-      <section className="relative py-24 px-6 bg-gradient-to-b from-transparent to-[#0f2a0f]/50">
+      <section className="relative py-12 px-6 bg-gradient-to-b from-transparent to-[#0f2a0f]/50">
         <div className="max-w-6xl mx-auto">
           <div className="backdrop-blur-md bg-white/10 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] p-12 md:p-16 border border-[#7fb069]/30 transform hover:scale-[1.02] transition-all duration-500">
             <div className="flex items-center gap-4 mb-8">
@@ -128,10 +133,10 @@ export default function CropManagementPage() {
       </section>
 
       {/* What This Service Covers */}
-      <section className="relative py-24 px-6">
+      <section className="relative py-12 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-block px-8 py-3 bg-[#7fb069]/20 backdrop-blur-sm border border-[#7fb069]/50 text-[#a7d7c5] rounded-full text-sm font-bold tracking-widest mb-6 animate-pulse-slow" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+            <div className=" inline-block px-6 py-2 text-white rounded-full text-md font-semibold mb-4 drop-shadow-lg animate-pulse-slow "  style={{ fontFamily: 'Crimson Text, serif' }}>
               COMPREHENSIVE SUPPORT
             </div>
             <h2 className="text-6xl md:text-7xl font-bold text-[#a7d7c5] mb-4 drop-shadow-lg" style={{ fontFamily: 'Crimson Text, serif' }}>
@@ -174,7 +179,7 @@ export default function CropManagementPage() {
       </section>
 
       {/* Why It Matters Section */}
-      <section className="relative py-24 px-6">
+      <section className="relative py-12 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="relative backdrop-blur-lg bg-gradient-to-br from-[#7fb069]/30 to-[#4a7c59]/30 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] p-12 md:p-16 border border-[#7fb069]/40 overflow-hidden">
             
@@ -199,29 +204,9 @@ export default function CropManagementPage() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Important Note Section */}
-      <section className="relative py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="backdrop-blur-md bg-amber-900/20 border-l-4 border-amber-500 rounded-2xl p-8 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
-            <div className="flex items-start gap-4">
-              <div className="text-5xl animate-pulse-slow">⚠️</div>
-              <div>
-                <h3 className="text-2xl font-bold text-amber-300 mb-3" style={{ fontFamily: 'Rajdhani, sans-serif', letterSpacing: '0.05em' }}>
-                  IMPORTANT NOTE
-                </h3>
-                <p className="text-lg text-amber-100" style={{ fontFamily: 'Merriweather, serif', fontWeight: 300 }}>
-                  This service provides guidance and advisory support during the crop cycle. Actual outcomes may vary depending on environmental conditions, land quality, and on-ground execution.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      </section> 
       {/* CTA Section */}
-      <section className="relative py-24 px-6 bg-gradient-to-b from-transparent to-[#0f2a0f]">
+      <section className="relative py-12 px-6 bg-gradient-to-b from-transparent to-[#0f2a0f]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl md:text-6xl font-bold text-[#a7d7c5] mb-6 drop-shadow-lg" style={{ fontFamily: 'Crimson Text, serif' }}>
             Ready to Optimize Your Crop Cycle?
@@ -230,15 +215,19 @@ export default function CropManagementPage() {
             To understand how Crop Management Support fits into the overall suran farming model, explore our complete services or contact us for further discussion.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href= "/services">
             <button className="group relative px-12 py-6 bg-[#7fb069] text-[#1a3a1a] rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(127,176,105,0.6)]">
               <span className="relative z-10 font-bold text-lg tracking-wide" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                 EXPLORE ALL SERVICES
               </span>
               <div className="absolute inset-0 bg-[#9dc88d] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
             </button>
+            </Link>
+            <Link href= "/contact">
             <button className="px-12 py-6 border-2 border-[#7fb069] text-[#7fb069] rounded-lg font-bold text-lg tracking-wide hover:bg-[#7fb069]/20 transition-all duration-300 hover:scale-105" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
               CONTACT US
             </button>
+            </Link>
           </div>
         </div>
       </section>

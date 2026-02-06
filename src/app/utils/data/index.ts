@@ -151,7 +151,7 @@ import { Sprout, Clock, TrendingUp, Globe2 , CheckCircle2, Target,ArrowRight, Sh
         },
         {
           icon: Package,
-          name: 'Satara, Kolhapur, Sangli Belt',
+          name: 'Satara, Sangli, Kolhapur Belt',
           description: 'Production and distribution center'
         },
         {
@@ -358,28 +358,29 @@ import { Sprout, Clock, TrendingUp, Globe2 , CheckCircle2, Target,ArrowRight, Sh
   ];
 
   // service component section end
+   
 
   // about us  section 2 images
 
    const productImages = [
       {
-        src: '/images/about/suran-about-img1.jpeg', 
+        src: '/images/suran-about-img1.jpeg', 
         alt: 'Quality Suran Product',
         title: 'Premium Quality'
       },
       {
-        src: '/images/about/suran-sec2-img2.jpeg', 
+        src: '/images/suran-sec2-img2.jpeg', 
         alt: 'Fresh Harvest',
         title: 'Export Grade'
       },
       {
-        src: '/images/about/suran-plant.png', 
+        src: '/images/suran-plant.png', 
         alt: 'Growing Suran',
         title: 'Sustainable Farming'
       }
     ];
 
- 
+    
     // about sec3 content 
     
       const businessStep: BusinessStep[] = [
@@ -663,4 +664,4 @@ const modelBenefits = [
     }
   ];
   export {highlights,service, businessStep, investmentData,processSteps, investmentHighlights, marketRegions, modelBenefits, benefits,consultationSteps
-    , markets, socialLinks, services,quickLinks, reasons, productImages, approachPoints , businessSteps, whyItWorks, steps}
+ , markets, socialLinks, services,quickLinks, reasons, productImages, approachPoints , businessSteps, whyItWorks, steps}

@@ -56,35 +56,35 @@ export default function ContactUs() {
       }, 3000);
     }, 1500);
   };
+    
 
+   const interests = [
+      { icon: <Sprout className="w-5 h-5" />, label: "Farming Partnership", value: "farming" },
+      { icon: <Leaf className="w-5 h-5" />, label: "Supply & Distribution", value: "supply" },
+      { icon: <Users className="w-5 h-5" />, label: "Business Consultation", value: "consultation" },
+      { icon: <MessageSquare className="w-5 h-5" />, label: "General Inquiry", value: "general" }
+    ];
   const contactInfo = [
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Phone",
-      details: "+91 XXXXX XXXXX",
-      subdetails: "Mon-Sat, 9AM-6PM IST"
-    },
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email",
-      details: "info@suranfarming.com",
-      subdetails: "We'll respond within 24 hours"
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: "Location",
-      details: "Maharashtra, India",
-      subdetails: "Serving across India & UAE"
-    }
-  ];
-
-  const interests = [
-    { icon: <Sprout className="w-5 h-5" />, label: "Farming Partnership", value: "farming" },
-    { icon: <Leaf className="w-5 h-5" />, label: "Supply & Distribution", value: "supply" },
-    { icon: <Users className="w-5 h-5" />, label: "Business Consultation", value: "consultation" },
-    { icon: <MessageSquare className="w-5 h-5" />, label: "General Inquiry", value: "general" }
-  ];
-
+      {
+        icon: <Phone className="w-6 h-6" />,
+        title: "Phone",
+        details: "+91 XXXXX XXXXX",
+        subdetails: "Mon-Sat, 9AM-6PM IST"
+      },
+      {
+        icon: <Mail className="w-6 h-6" />,
+        title: "Email",
+        details: "info@suranfarming.com",
+        subdetails: "We'll respond within 24 hours"
+      },
+      {
+        icon: <MapPin className="w-6 h-6" />,
+        title: "Location",
+        details: "Maharashtra, India",
+        subdetails: "Serving across India & UAE"
+      }
+    ];
+    
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-950 to-slate-900 text-white overflow-hidden">
       {/* Animated Background Elements */}

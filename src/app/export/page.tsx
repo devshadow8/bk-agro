@@ -3,19 +3,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import {
-  Globe,
-  Ship,
-  Package,
-  CheckCircle2,
-  ArrowRight,
-  Truck,
-  FileCheck,
-  MapPin,
-  TrendingUp,
-  AlertCircle,
-  Anchor,
-} from "lucide-react";
+import {Globe,Ship,Package,CheckCircle2,ArrowRight,Truck,FileCheck,MapPin,TrendingUp,AlertCircle,Anchor,} from "lucide-react";
 import Link from "next/link";
 export default function ExportOperations() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,7 +11,6 @@ export default function ExportOperations() {
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const exportSteps = [
     {
       number: "1",
@@ -76,6 +63,8 @@ export default function ExportOperations() {
       text: "Well-established import and distribution networks",
     },
   ];
+
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-950 to-slate-900 text-white overflow-hidden">
@@ -174,7 +163,7 @@ export default function ExportOperations() {
         </div>
       </section>
       {/* Introduction Section */}
-      <section className="relative py-20 px-6 md:px-12">
+      <section className="relative py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div
             className={`transform transition-all duration-1000 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
@@ -200,7 +189,7 @@ export default function ExportOperations() {
       </section>
 
       {/* ================= EXPORT-READY PRODUCE ================= */}
-      <section className="relative py-20 px-6 md:px-12">
+      <section className="relative py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div
             className={`transition-all duration-1000 delay-300 ${
@@ -272,9 +261,8 @@ export default function ExportOperations() {
           </div>
         </div>
       </section>
-      {/* Export Process Overview */}
       {/* ================= EXPORT PROCESS OVERVIEW ================= */}
-      <section className="relative py-20 px-6 md:px-12">
+      <section className="relative py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div
             className={`transform transition-all duration-1000 delay-400 ${
@@ -365,7 +353,7 @@ export default function ExportOperations() {
       </section>
 
       {/* ================= EXPORT MARKETS – UAE ================= */}
-      <section className="relative py-20 px-6 md:px-12">
+      <section className="relative py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div
             className={`transform transition-all duration-1000 delay-600 ${
@@ -473,7 +461,7 @@ export default function ExportOperations() {
       </section>
 
       {/* Why Our Export Approach Works */}
-      <section className="relative py-20 px-6 md:px-12">
+      <section className="relative py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div
             className={`transform transition-all duration-1000 delay-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
@@ -505,7 +493,7 @@ export default function ExportOperations() {
       </section>
 
       {/* Important Note Section */}
-      <section className="relative py-20 px-6 md:px-12">
+      <section className="relative py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div
             className={`transform transition-all duration-1000 delay-800 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
@@ -548,7 +536,7 @@ export default function ExportOperations() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-32 px-6 md:px-12">
+      <section className="relative py-15 px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center">
           <div
             className={`transform transition-all duration-1000 delay-900 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}

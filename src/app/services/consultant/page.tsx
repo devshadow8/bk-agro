@@ -3,8 +3,9 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { MessageSquare, Users, FileText, TrendingUp, CheckCircle2, AlertCircle, ArrowRight, Lightbulb, Shield, Target } from 'lucide-react';
+import { MessageSquare, Users, FileText,CheckCircle2, ArrowRight, Lightbulb, Shield, Target } from 'lucide-react';
 import { benefits, consultationSteps } from '../../utils/data';
+import Link from 'next/link';
 export default function ConsultingBusinessSupport() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -59,20 +60,24 @@ const services = [
             </p>
 
             <div className="flex flex-wrap gap-4">
+              <Link href="/contact">
               <button className="group px-8 py-4 bg-gradient-to-r from-emerald-500 to-green-600 rounded-full font-semibold flex items-center gap-2 hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105">
                 Schedule Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
+              </Link>
+              <Link href="/">
               <button className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
                 Learn More
               </button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* Overview Section */}
-      <section className="relative py-20 px-6 md:px-12">
+      <section className="relative py-8 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className={`transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="bg-gradient-to-br from-emerald-900/40 to-green-900/40 backdrop-blur-xl border border-emerald-500/20 rounded-3xl p-8 md:p-12 shadow-2xl">
@@ -89,7 +94,7 @@ const services = [
       </section>
 
       {/* Services Section */}
-      <section className="relative py-20 px-6 md:px-12">
+      <section className="relative py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className={`transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">
@@ -128,7 +133,7 @@ const services = [
       </section>
 
       {/* Consultation Process Section */}
-      <section className="relative py-20 px-6 md:px-12">
+      <section className="relative py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className={`transform transition-all duration-1000 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">
@@ -163,7 +168,7 @@ const services = [
       </section>
 
       {/* Benefits Section */}
-      <section className="relative py-20 px-6 md:px-12">
+      <section className="relative py-10 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className={`transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="bg-gradient-to-br from-green-900/40 to-emerald-900/40 backdrop-blur-xl border border-green-500/20 rounded-3xl p-8 md:p-12 shadow-2xl">
@@ -192,7 +197,7 @@ const services = [
       </section>
 
       {/* Image Section - Consultation Visual */}
-      <section className="relative py-20 px-6 md:px-12">
+      <section className="relative py-10 px-6 md:px-12">
         <div className="max-w-5xl mx-auto">
           <div className={`transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-900/30 to-green-900/30 border border-emerald-500/20 hover:border-emerald-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20">
@@ -218,30 +223,8 @@ const services = [
           </div>
         </div>
       </section>
-
-      {/* Important Note Section */}
-      <section className="relative py-20 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
-          <div className={`transform transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <div className="bg-gradient-to-br from-amber-900/30 to-orange-900/30 backdrop-blur-xl border border-amber-500/30 rounded-3xl p-8 md:p-12 shadow-2xl">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/50">
-                  <AlertCircle className="w-6 h-6" />
-                </div>
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-bold mb-4 text-amber-300">Important Note</h2>
-                  <p className="text-amber-100/90 text-lg leading-relaxed">
-                    This service provides information, explanation, and advisory support. It does not constitute financial, legal, or investment guarantees, and outcomes may vary.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="relative py-32 px-6 md:px-12">
+      <section className="relative py-10 px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center">
           <div className={`transform transition-all duration-1000 delay-800 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">
@@ -251,13 +234,17 @@ const services = [
               Schedule a consultation session to get clarity on the suran farming business model and make informed decisions.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
+              <Link href= "/contact">
               <button className="group px-10 py-5 bg-gradient-to-r from-emerald-500 to-green-600 rounded-full font-bold text-lg flex items-center gap-3 hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105">
                 Book Consultation
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
               </button>
+              </Link>
+              <Link href="/contact">
               <button className="px-10 py-5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300">
                 Contact Us
               </button>
+              </Link>
             </div>
           </div>
         </div>
