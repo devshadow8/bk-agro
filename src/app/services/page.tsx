@@ -1,8 +1,10 @@
 /* eslint-disable react-hooks/purity */
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, {useRef, useState, useMemo } from 'react';
 import { motion, useInView, useScroll, useTransform, cubicBezier } from 'framer-motion';
+import { Link } from 'lucide-react';
+
 
 // Types
 interface Service {
@@ -139,102 +141,92 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
   );
 };
 
-// Hero Section Component
+/// Hero section
 const HeroSection: React.FC = () => {
   const ref = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"]
+    offset: ['start start', 'end start'],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
+  // ✅ Use useState with lazy initializer instead of useMemo
+  const [blobs] = useState(() => {
+    return Array.from({ length: 20 }).map(() => {
+      const size = Math.random() * 300 + 50;
+
+      return {
+        size,
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+        xMove: Math.random() * 100 - 50,
+        yMove: Math.random() * 100 - 50,
+        scale: Math.random() + 0.5,
+        duration: Math.random() * 10 + 10,
+      };
+    });
+  });
+
   return (
-    <section ref={ref} className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50">
-      {/* Animated background elements */}
+    <section
+      ref={ref}
+      className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50"
+    >
+      {/* Animated background */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {blobs.map((blob, i) => (
           <motion.div
             key={i}
             className="absolute rounded-full bg-gradient-to-br from-emerald-300/20 to-green-400/20"
             style={{
-              width: Math.random() * 300 + 50,
-              height: Math.random() * 300 + 50,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              width: blob.size,
+              height: blob.size,
+              left: `${blob.left}%`,
+              top: `${blob.top}%`,
             }}
             animate={{
-              y: [0, Math.random() * 100 - 50],
-              x: [0, Math.random() * 100 - 50],
-              scale: [1, Math.random() + 0.5, 1],
+              x: [0, blob.xMove, 0],
+              y: [0, blob.yMove, 0],
+              scale: [1, blob.scale, 1],
             }}
             transition={{
-              duration: Math.random() * 10 + 10,
+              duration: blob.duration,
               repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut"
+              repeatType: 'reverse',
+              ease: 'easeInOut',
             }}
           />
         ))}
       </div>
 
-      <motion.div 
+      <motion.div
         style={{ y, opacity }}
         className="relative z-10 text-center px-6 max-w-4xl mx-auto"
       >
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-6"
-        >
-          <span className="inline-block px-6 py-2 bg-white/80 backdrop-blur-sm rounded-full text-emerald-600 font-semibold text-sm shadow-lg">
-            🌱 Agricultural Excellence
+              <motion.div
+        style={{ y, opacity }}
+        className="relative z-10 text-center px-6 max-w-4xl mx-auto"
+      >
+        <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6">
+          Our{' '}
+          <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
+            Services
           </span>
-        </motion.div>
+        </h1>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight"
-        >
-          Our <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">Services</span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl text-gray-700 leading-relaxed"
-        >
+        <p className="text-xl md:text-2xl text-gray-700">
           End-to-end support across suran cultivation, quality management, and market linkage.
-        </motion.p>
+        </p>
+      </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 rounded-full border-2 border-emerald-600 flex items-start justify-center p-2"
-          >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-1.5 h-1.5 bg-emerald-600 rounded-full"
-            />
-          </motion.div>
-        </motion.div>
       </motion.div>
     </section>
   );
 };
+
 
 // Introduction Section
 const IntroSection: React.FC = () => {
@@ -242,7 +234,7 @@ const IntroSection: React.FC = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-20 px-6 bg-white">
+    <section ref={ref} className="py-10 px-6 bg-white">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"
@@ -288,7 +280,7 @@ const MarketsSection: React.FC = () => {
   ];
 
   return (
-    <section ref={ref} className="py-20 px-6 bg-gradient-to-br from-gray-50 to-emerald-50">
+    <section ref={ref} className="py-10 px-6 bg-gradient-to-br from-gray-50 to-emerald-50">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial="hidden"
@@ -354,40 +346,6 @@ const MarketsSection: React.FC = () => {
   );
 };
 
-// Important Note Section
-const ImportantNote: React.FC = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  return (
-    <section ref={ref} className="py-16 px-6 bg-amber-50">
-      <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={fadeInUp}
-          className="bg-white rounded-3xl p-8 shadow-xl border-l-8 border-amber-500"
-        >
-          <div className="flex items-start gap-4">
-            <motion.div
-              animate={{ rotate: [0, 10, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="text-4xl flex-shrink-0"
-            >
-              ⚠️
-            </motion.div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Important Note</h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Agriculture involves natural and market-related risks. Services are provided as operational and advisory support, and outcomes may vary.
-              </p>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
 
 // CTA Section
 const CTASection: React.FC = () => {
@@ -395,29 +353,48 @@ const CTASection: React.FC = () => {
   const isInView = useInView(ref, { once: true });
   const [isHovered, setIsHovered] = useState(false);
 
+  const bubbles = useMemo(() => {
+    return Array.from({ length: 15 }).map(() => {
+      const size = Math.random() * 200 + 50;
+
+      return {
+        size,
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+        xMove: Math.random() * 50 - 25,
+        yMove: Math.random() * 50 - 25,
+        scale: Math.random() * 0.5 + 0.5,
+        duration: Math.random() * 8 + 5,
+      };
+    });
+  }, []);
+
   return (
-    <section ref={ref} className="py-24 px-6 bg-gradient-to-br from-emerald-600 to-green-600 relative overflow-hidden">
+    <section
+      ref={ref}
+      className="py-10 px-6 bg-gradient-to-br from-emerald-600 to-green-600 relative overflow-hidden"
+    >
       {/* Animated background */}
       <div className="absolute inset-0">
-        {[...Array(15)].map((_, i) => (
+        {bubbles.map((b, i) => (
           <motion.div
             key={i}
             className="absolute rounded-full bg-white/10"
             style={{
-              width: Math.random() * 200 + 50,
-              height: Math.random() * 200 + 50,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              width: b.size,
+              height: b.size,
+              left: `${b.left}%`,
+              top: `${b.top}%`,
             }}
             animate={{
-              y: [0, Math.random() * 50 - 25],
-              x: [0, Math.random() * 50 - 25],
-              scale: [1, Math.random() * 0.5 + 0.5, 1],
+              x: [0, b.xMove, 0],
+              y: [0, b.yMove, 0],
+              scale: [1, b.scale, 1],
             }}
             transition={{
-              duration: Math.random() * 8 + 5,
+              duration: b.duration,
               repeat: Infinity,
-              repeatType: "reverse"
+              repeatType: 'reverse',
             }}
           />
         ))}
@@ -441,7 +418,8 @@ const CTASection: React.FC = () => {
         >
           Interested in learning more about our services or how we work?
         </motion.p>
-        
+       <a href = "/contact">
+
         <motion.button
           variants={scaleIn}
           onMouseEnter={() => setIsHovered(true)}
@@ -451,7 +429,7 @@ const CTASection: React.FC = () => {
           <motion.span
             className="relative z-10 flex items-center gap-3"
             animate={isHovered ? { x: -5 } : { x: 0 }}
-          >
+          > 
             Contact Us
             <motion.span
               animate={isHovered ? { x: 5 } : { x: 0 }}
@@ -459,6 +437,7 @@ const CTASection: React.FC = () => {
             >
               →
             </motion.span>
+          
           </motion.span>
           
           <motion.div
@@ -468,6 +447,7 @@ const CTASection: React.FC = () => {
             transition={{ duration: 0.3 }}
           />
         </motion.button>
+          </a>
       </motion.div>
     </section>
   );
@@ -562,7 +542,7 @@ const ServicesPage: React.FC = () => {
       <IntroSection />
       
       {/* Services Grid */}
-      <section className="py-24 px-6 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-10 px-6 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -586,7 +566,6 @@ const ServicesPage: React.FC = () => {
       </section>
 
       <MarketsSection />
-      <ImportantNote />
       <CTASection />
     </div>
   );

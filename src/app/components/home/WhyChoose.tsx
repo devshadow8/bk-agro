@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+    <section className="relative py-10 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
       

@@ -226,7 +226,7 @@ import { Sprout, Clock, TrendingUp, Globe2 , CheckCircle2, Target,ArrowRight, Sh
     ];
   
     const socialLinks = [
-      { icon: Facebook, href: "#", color: "hover:text-green-400" },
+      { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61587359844577", color: "hover:text-green-400" },
       { icon: Instagram, href: "#", color: "hover:text-emerald-400" },
       { icon: Twitter, href: "#", color: "hover:text-green-500" },
       { icon: Linkedin, href: "#", color: "hover:text-emerald-600" },
@@ -663,5 +663,51 @@ const modelBenefits = [
       icon: Globe,
     }
   ];
+
+
+  // products data 
+  
+
+  const crops = [
+    'Suran (Elephant Foot Yam)',
+    'Vegetables and leafy greens',
+    'Fruit orchards',
+    'Field crops and grains',
+    'Organic farming systems',
+  ];
+
+
+  const products = [
+  {
+    title: "Gobar Compost Powder – Standard Grade",
+    desc: "Natural compost powder prepared from well-decomposed cow dung to improve soil fertility and structure.",
+    image: "/images/product1.png",
+  },
+  {
+    title: "Gobar Compost Powder – Fine Texture",
+    desc: "Finely processed compost powder suitable for even soil mixing and smooth application.",
+    image: "/images/product2.png",
+  },
+  {
+    title: "Gobar Compost Powder – Soil Enrichment Blend",
+    desc: "Organic compost powder designed to enhance soil structure and microbial activity.",
+    image: "/images/product3.png",
+  },
+  {
+    title: "Gobar Compost Powder – Bulk Farm Use",
+    desc: "Suitable for large-scale agricultural use and bulk soil preparation.",
+    image: "/images/product4.png",
+  },
+  {
+    title: "Gobar Compost Powder – Organic Farming Grade",
+    desc: "Pure organic compost powder supporting eco-friendly and sustainable farming practices.",
+    image: "/images/product8.png",
+  },
+  {
+    title: "Gobar Compost Powder – Soil Conditioner",
+    desc: "Helps improve soil aeration, water retention, and nutrient absorption.",
+    image: "/images/product5.png",
+  },
+];
   export {highlights,service, businessStep, investmentData,processSteps, investmentHighlights, marketRegions, modelBenefits, benefits,consultationSteps
- , markets, socialLinks, services,quickLinks, reasons, productImages, approachPoints , businessSteps, whyItWorks, steps}
+ , markets, crops, products, socialLinks, services,quickLinks, reasons, productImages, approachPoints , businessSteps, whyItWorks, steps}

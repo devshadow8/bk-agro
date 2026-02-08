@@ -50,15 +50,15 @@ export default function PostHarvestHandlingPackingPage() {
       {/* ============================================ */}
       {/* HERO SECTION */}
       {/* ============================================ */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-10">
         <div className="absolute inset-0">
-          <Image src="/images/banner.jpg" alt="Post-harvest handling" fill className="object-cover" priority />
+          <Image src="/images/overviewimg.png" alt="Post-harvest handling" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-br from-green-900/80 via-emerald-900/70 to-green-800/80" />
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
           <div className="mb-8">
-            <span className="text-8xl">📦</span>
+            {/* <span className="text-8xl">📦</span> */}
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -91,7 +91,7 @@ export default function PostHarvestHandlingPackingPage() {
             {/* Image */}
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-xl">
-                <Image src="/images/overview.jpg" alt="Post-harvest overview" width={800} height={600} className="w-full object-cover" />
+                <Image src="/images/overview.png" alt="Post-harvest overview" width={800} height={600} className="w-full object-cover" />
               </div>
 
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-green-500 to-emerald-600 text-white rounded-2xl p-6 shadow-xl">

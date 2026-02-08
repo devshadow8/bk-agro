@@ -117,7 +117,6 @@ const Footer = () => {
                     <a
                       key={i}
                       href={social.href}
-                      target="_blank"
                       rel="noopener noreferrer"
                       className={`w-11 h-11 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center transition hover:scale-110 hover:-translate-y-1 ${social.color}`}
                     >
@@ -175,16 +174,16 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">Contact Info</h3>
             <ul className="space-y-4 text-gray-400">
               <li className="flex gap-3">
-                <MapPin /> Agricultural District, Your City
+                <MapPin /> Office 501, Navratnagold, Vihar Chowk,Hadapsar, Pune 411028
               </li>
               <li className="flex gap-3">
-                <Mail /> info@bk-agro.com
+                <Mail /> bkagroexporters@gmail.com
               </li>
               <li className="flex gap-3">
-                <Phone /> +91 XXXXX XXXXX
+                <Phone /> +91 9764446454
               </li>
               <li className="flex gap-3">
-                <Clock /> Mon–Sat: 9:00 AM – 6:00 PM
+                <Clock /> Mon–Sun: 9:00 AM – 6:00 PM
               </li>
             </ul>
           </div>
@@ -192,31 +191,9 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 py-6 text-center text-gray-400 text-sm">
-          © 2025 BK-Agro. All Rights Reserved.
+          © 2026 BK-Agro. All Rights Reserved.
         </div>
-      </div>
-
-      {/* Animations */}
-      <style jsx>{`
-        @keyframes float-leaf {
-          0% {
-            transform: translateY(0) rotate(0deg);
-            opacity: 0;
-          }
-          10%,
-          90% {
-            opacity: 1;
-          }
-          100% {
-            transform: translateY(100vh) rotate(360deg);
-            opacity: 0;
-          }
-        }
-
-        .animate-float-leaf {
-          animation: float-leaf linear infinite;
-        }
-      `}</style>
+      </div> 
     </footer>
   );
 };

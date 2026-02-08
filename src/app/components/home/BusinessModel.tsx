@@ -7,7 +7,7 @@ const WorkflowSection = () => {
   
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900 overflow-hidden relative min-h-screen">
+    <section className="py-10 px-4 bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900 overflow-hidden relative min-h-screen">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Decorative circles */}
@@ -25,7 +25,7 @@ const WorkflowSection = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-32">
+        <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
             How Our Model Works
           </h2>
@@ -106,7 +106,7 @@ const WorkflowSection = () => {
           </svg>
 
           {/* Steps Row */}
-          <div className="flex justify-between items-end gap-6 relative pt-56">
+          <div className="flex justify-between items-end gap-6 relative pt-20">
             {steps.map((step, index) => {
               const Icon = step.icon;
               const isActive = index === 0; // Highlight first step
@@ -265,7 +265,7 @@ const WorkflowSection = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-24">
+        <div className="text-center mt-10">
           <Link href= "/contact">
           <button 
             className="group relative bg-gradient-to-r from-yellow-400 via-green-500 to-emerald-500 

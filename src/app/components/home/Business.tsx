@@ -12,7 +12,8 @@ const MarketCoverage = () => {
   const currentMarket = markets[activeMarket];
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-gray-50 via-white to-green-50/30 overflow-hidden">
+    <>
+    <section className="relative py-10 bg-gradient-to-b from-gray-50 via-white to-green-50/30 overflow-hidden">
       {/* Background Decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Animated Globe Pattern */}
@@ -269,6 +270,7 @@ const MarketCoverage = () => {
         </motion.div>
       </div>
     </section>
+    </>
   );
 };
 

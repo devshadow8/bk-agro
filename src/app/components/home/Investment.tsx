@@ -2,13 +2,13 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, Clock, DollarSign, Globe2, AlertCircle } from 'lucide-react';
+import { TrendingUp, Globe2, } from 'lucide-react';
 import {investmentData} from "../../utils/data"
 import Link from "next/link"
 const InvestmentSnapshot = () => {
  
   return (
-    <section className="relative py-24 bg-gradient-to-br from-white via-green-50/40 to-emerald-50/30 overflow-hidden">
+    <section className="relative py-10 bg-gradient-to-br from-white via-green-50/40 to-emerald-50/30 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Subtle Grid Pattern */}

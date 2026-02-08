@@ -3,6 +3,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { span } from 'framer-motion/client';
 
 export default function CropManagementPage() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -101,7 +102,7 @@ export default function CropManagementPage() {
           </div>
 
           {/* Scroll Indicator */}
-          <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
             <div className="flex flex-col items-center gap-2">
               <span className="text-[#a7d7c5] text-sm tracking-wider" style={{ fontFamily: 'Rajdhani, sans-serif' }}></span>
               <div className="w-6 h-10 border-2 border-[#7fb069] rounded-full flex items-start justify-center p-2">
@@ -113,7 +114,7 @@ export default function CropManagementPage() {
       </section>
 
       {/* Overview Section */}
-      <section className="relative py-12 px-6 bg-gradient-to-b from-transparent to-[#0f2a0f]/50">
+      <section className="relative py-8 px-6 bg-gradient-to-b from-transparent to-[#0f2a0f]/50">
         <div className="max-w-6xl mx-auto">
           <div className="backdrop-blur-md bg-white/10 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] p-12 md:p-16 border border-[#7fb069]/30 transform hover:scale-[1.02] transition-all duration-500">
             <div className="flex items-center gap-4 mb-8">

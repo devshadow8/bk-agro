@@ -50,7 +50,7 @@ export default function AgriculturalPlanningPage() {
               <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#7a9d54]" />
             </div>
 
-            <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold text-center mb-6 leading-none">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-center mb-6 leading-none">
               <span className="block text-[#2d3e1f] font-serif italic" style={{ fontFamily: 'Playfair Display, serif' }}>
                 Agricultural
               </span>

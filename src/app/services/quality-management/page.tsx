@@ -67,7 +67,7 @@ const HeroSection: React.FC = () => {
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95]);
 
   return (
-    <section ref={ref} className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <section ref={ref} className="relative min-h-[75vh] flex items-center justify-center overflow-hidden py-35">
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.15),transparent_50%)]" />
@@ -167,14 +167,14 @@ const HeroSection: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
+          className="absolute left-1/2 transform -translate-x-1/2 "
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
             className="flex flex-col items-center gap-2"
           >
-            <span className="text-sm text-gray-600 font-medium">Scroll to explore</span>
+            <span className="text-sm text-gray-600 font-medium ">Scroll to explore</span>
             <div className="w-6 h-10 rounded-full border-2 border-teal-600 flex items-start justify-center p-2">
               <motion.div
                 animate={{ y: [0, 12, 0] }}
@@ -195,7 +195,7 @@ const OverviewSection: React.FC = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 px-6 bg-white relative overflow-hidden">
+    <section ref={ref} className="py-10 px-6 bg-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-teal-100/50 to-cyan-100/50 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-100/50 to-indigo-100/50 rounded-full blur-3xl" />
@@ -389,7 +389,7 @@ const ServiceCoverageSection: React.FC = () => {
   ];
 
   return (
-    <section ref={ref} className="py-24 px-6 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section ref={ref} className="px-6 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-gradient-to-r from-teal-200/30 to-transparent rounded-full blur-3xl transform -translate-y-1/2" />
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-gradient-to-l from-blue-200/30 to-transparent rounded-full blur-3xl transform -translate-y-1/2" />
@@ -461,7 +461,7 @@ const WhyItMattersSection: React.FC = () => {
   ];
 
   return (
-    <section ref={ref} className="py-24 px-6 bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-600 relative overflow-hidden">
+    <section ref={ref} className="py-10 px-6 bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-600 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
@@ -544,53 +544,6 @@ const WhyItMattersSection: React.FC = () => {
   );
 };
 
-// Important Note Section
-const ImportantNoteSection: React.FC = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  return (
-    <section ref={ref} className="py-20 px-6 bg-gradient-to-b from-white to-amber-50">
-      <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={fadeInUp}
-          className="relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 md:p-12 shadow-2xl border-l-8 border-amber-500 overflow-hidden"
-        >
-          {/* Background decoration */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-amber-200/30 to-transparent rounded-full blur-3xl" />
-
-          <div className="relative z-10 flex flex-col md:flex-row items-start gap-6">
-            {/* Icon */}
-            <motion.div
-              animate={{ 
-                rotate: [0, 5, -5, 0],
-                scale: [1, 1.1, 1]
-              }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="flex-shrink-0"
-            >
-              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-4xl shadow-xl">
-                ⚠️
-              </div>
-            </motion.div>
-
-            {/* Content */}
-            <div className="flex-1">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Important Note</h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                This service provides operational guidance and quality handling support. Final quality 
-                outcomes depend on execution, environmental conditions, and market requirements.
-              </p>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
 // CTA Section
 const CTASection: React.FC = () => {
   const ref = useRef(null);
@@ -598,7 +551,7 @@ const CTASection: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section ref={ref} className="py-24 px-6 bg-gradient-to-br from-gray-900 via-teal-900 to-cyan-900 relative overflow-hidden">
+    <section ref={ref} className="py-10 px-6 bg-gradient-to-br from-gray-900 via-teal-900 to-cyan-900 relative overflow-hidden">
       {/* Animated grid background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
@@ -721,7 +674,7 @@ export default function QualityHarvestManagementPage() {
       <OverviewSection />
       <ServiceCoverageSection />
       <WhyItMattersSection />
-      <ImportantNoteSection />
+      {/* <ImportantNoteSection /> */}
       <CTASection />
     </div>
   );

@@ -7,7 +7,7 @@ import { highlights } from "../../utils/data";
 
 const Highlights = () => {
   return (
-    <section className="relative py-20 bg-gradient-to-b from-white via-green-50/30 to-white overflow-hidden">
+    <section className="relative py-10 bg-gradient-to-b from-white via-green-50/30 to-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}

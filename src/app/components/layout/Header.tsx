@@ -22,7 +22,8 @@ const navItems = [
   { name: "About BK-Agro", link: "/about-us" },
   { name: "Business", link: "/business" },
   { name: "Services", link: "/services", dropdown: servicesDropdown },
-  { name: "Export", link: "/export" }
+  { name: "Export", link: "/export" },
+  { name: "Other_Products", link: "/other-products" }
 ];
 
 const particlePositions = [

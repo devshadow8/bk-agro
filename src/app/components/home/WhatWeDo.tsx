@@ -32,7 +32,7 @@ const WhatWeDo = () => {
               {/* Replace with your actual image */}
               <div className="relative aspect-[4/3.9] bg-gradient-to-br from-green-100 to-emerald-100">
                 <Image
-                  src="/images/about1.png"
+                  src="/images/suran-about.png"
                   alt="Suran Cultivation Farm"
                   fill
                   className="object-cover"
