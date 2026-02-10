@@ -247,7 +247,7 @@ export default function ContactUs() {
             {/* Google Map */}
             <div className="bg-emerald-900/40 backdrop-blur-xl border border-emerald-500/20 rounded-3xl overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.0168640354447!2d73.85674731489867!3d18.52043008741677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0778c9fb9a1%3A0x4d8d2b6f0e4e8e8e!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.6409484949563!2d73.92794727141421!3d18.49991603135007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1f9b10975c9%3A0x325f71f00ad1777d!2sVihar%20Chowk%2C%20Hadapsar%20Gaon%2C%20Hadapsar%2C%20Pune%2C%20Maharashtra%20411028!5e0!3m2!1sen!2sin!4v1770624565783!5m2!1sen!2sin"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}

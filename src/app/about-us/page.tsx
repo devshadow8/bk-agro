@@ -94,23 +94,22 @@ const AboutPage = () => {
               transition={{ duration: 0.6 }}
             >
               <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                BK-Agro is an agriculture-focused business engaged in structured
-                suran (elephant foot yam) cultivation and organized market
-                distribution. Our farming model is built on planned cultivation,
-                yield discipline, and demand-driven execution.
+                BK-Agro is an agriculture-focused enterprise specializing in
+                structured suran (elephant foot yam) farming through a
+                disciplined, export-oriented cultivation model. We operate at
+                the intersection of planned suran cultivation, contract farming
+                in India, and organized market distribution, ensuring
+                consistency from farm to export. Our elephant foot yam farming
+                model is built on yield discipline, transparent farming
+                practices, and demand-driven execution. We collaborate closely
+                with farmers under agricultural contract farming frameworks to
+                deliver export quality suran that meets domestic and
+                international standards. With a clearly defined suran crop cycle
+                of 12 months, our farming operations are aligned with global
+                demand forecasting, making us a reliable suran exporter from
+                India and a trusted suran wholesale supplier.
               </p>
 
-              <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                We work closely with farming operations to ensure crop quality,
-                consistency, and scalability while aligning production with real
-                domestic and international market requirements.
-              </p>
-
-              <p className="text-xl text-gray-700 leading-relaxed">
-                Our focus remains on long-term sustainability, transparent
-                processes, and value creation across the agricultural supply
-                chain.
-              </p>
             </motion.div>
 
             {/* Right Images */}
@@ -151,9 +150,8 @@ const AboutPage = () => {
                     alt="Elephant foot yam p roduce"
                     fill
                     className="object-cover"
-                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                     loading="lazy"
-
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
                   />
                 </div>
               </div>

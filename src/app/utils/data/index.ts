@@ -227,7 +227,7 @@ import { Sprout, Clock, TrendingUp, Globe2 , CheckCircle2, Target,ArrowRight, Sh
   
     const socialLinks = [
       { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61587359844577", color: "hover:text-green-400" },
-      { icon: Instagram, href: "#", color: "hover:text-emerald-400" },
+      { icon: Instagram, href: "https://www.instagram.com/bkagroexporters/", color: "hover:text-emerald-400" },
       { icon: Twitter, href: "#", color: "hover:text-green-500" },
       { icon: Linkedin, href: "#", color: "hover:text-emerald-600" },
       { icon: Youtube, href: "#", color: "hover:text-green-500" }

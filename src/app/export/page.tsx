@@ -3,8 +3,21 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import {Globe,Ship,Package,CheckCircle2,ArrowRight,Truck,FileCheck,MapPin,TrendingUp,AlertCircle,Anchor,} from "lucide-react";
+import {
+  Globe,
+  Ship,
+  Package,
+  CheckCircle2,
+  ArrowRight,
+  Truck,
+  FileCheck,
+  MapPin,
+  TrendingUp,
+  AlertCircle,
+  Anchor,
+} from "lucide-react";
 import Link from "next/link";
+import { section } from "framer-motion/client";
 export default function ExportOperations() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -63,8 +76,6 @@ export default function ExportOperations() {
       text: "Well-established import and distribution networks",
     },
   ];
-
-  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-950 to-slate-900 text-white overflow-hidden">
@@ -173,11 +184,12 @@ export default function ExportOperations() {
                 Introduction
               </h2>
               <p className="text-lg text-emerald-100/90 leading-relaxed mb-6">
-                BK-Agro supports international export of suran (elephant foot
-                yam) through structured coordination and quality-focused
-                preparation. Our export approach is designed to align
-                agricultural produce with international market requirements,
-                logistics standards, and destination demand.
+                BK-Agro supports the international export of suran (elephant
+                foot yam) from India through structured coordination,
+                quality-focused preparation, and compliance-driven execution.
+                Our export operations are designed to align agricultural produce
+                with international market requirements, logistics standards, and
+                destination-specific demand.
               </p>
               <p className="text-lg text-emerald-100/90 leading-relaxed">
                 We currently focus on select international markets where Indian

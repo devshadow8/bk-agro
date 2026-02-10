@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/set-state-in-effect */
-'use client';
+"use client";
 
-import React, { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
+import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 export default function AgriculturalPlanningPage() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -10,22 +10,23 @@ export default function AgriculturalPlanningPage() {
 
   useEffect(() => {
     setIsVisible(true);
-    
+
     const handleScroll = () => {
-      const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const totalScroll =
+        document.documentElement.scrollHeight - window.innerHeight;
       const currentScroll = window.scrollY;
       setScrollProgress((currentScroll / totalScroll) * 100);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-[#1a3a1a] via-[#2d5a2d] to-[#1a4a1a] overflow-hidden py-20">
       {/* Scroll Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-[#d4e8cf] z-50">
-        <div 
+        <div
           className="h-full bg-gradient-to-r from-[#5a7c3e] via-[#7a9d54] to-[#9fbd6f] transition-all duration-300"
           style={{ width: `${scrollProgress}%` }}
         />
@@ -40,9 +41,14 @@ export default function AgriculturalPlanningPage() {
       </div>
 
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-6 py-20">
+      <section
+        ref={heroRef}
+        className="relative min-h-screen flex items-center justify-center px-6 py-20"
+      >
         <div className="max-w-7xl mx-auto w-full">
-          <div className={`transform transition-all duration-1500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+          <div
+            className={`transform transition-all duration-1500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}
+          >
             {/* Decorative Top Element */}
             <div className="flex items-center justify-center mb-8 gap-4">
               <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#7a9d54]" />
@@ -51,30 +57,46 @@ export default function AgriculturalPlanningPage() {
             </div>
 
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-center mb-6 leading-none">
-              <span className="block text-[#2d3e1f] font-serif italic" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <span
+                className="block text-[#2d3e1f] font-serif italic"
+                style={{ fontFamily: "Playfair Display, serif" }}
+              >
                 Agricultural
               </span>
-              <span className="block text-[#5a7c3e] mt-2" style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 800 }}>
+              <span
+                className="block text-[#5a7c3e] mt-2"
+                style={{
+                  fontFamily: "Montserrat, sans-serif",
+                  fontWeight: 800,
+                }}
+              >
                 Planning & Setup
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-center text-[#6b7c5c] max-w-3xl mx-auto leading-relaxed mb-12" style={{ fontFamily: 'Lora, serif' }}>
-              The foundation of successful suran cultivation. Structured planning before plantation, ensuring excellence from seed to harvest.
+            <p
+              className="text-xl md:text-2xl text-center text-[#6b7c5c] max-w-3xl mx-auto leading-relaxed mb-12"
+              style={{ fontFamily: "Lora, serif" }}
+            >
+              The foundation of successful suran cultivation. Structured
+              planning before plantation, ensuring excellence from seed to
+              harvest.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href = "/contact">
-              <button className="group relative px-8 py-4 bg-[#5a7c3e] text-white rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <span className="relative z-10 font-semibold text-lg">Start Planning</span>
-                <div className="absolute inset-0 bg-[#2d3e1f] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
-              </button>
+              <Link href="/contact">
+                <button className="group relative px-8 py-4 bg-[#5a7c3e] text-white rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                  <span className="relative z-10 font-semibold text-lg">
+                    Start Planning
+                  </span>
+                  <div className="absolute inset-0 bg-[#2d3e1f] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+                </button>
               </Link>
-              <Link href = "/">
-              <button className="px-8 py-4 border-2 border-[#5a7c3e] text-[#5a7c3e] rounded-full font-semibold text-lg hover:bg-[#5a7c3e] hover:text-white transition-all duration-300 hover:scale-105">
-                Learn More
-              </button>
+              <Link href="/">
+                <button className="px-8 py-4 border-2 border-[#5a7c3e] text-[#5a7c3e] rounded-full font-semibold text-lg hover:bg-[#5a7c3e] hover:text-white transition-all duration-300 hover:scale-105">
+                  Learn More
+                </button>
               </Link>
             </div>
           </div>
@@ -94,15 +116,31 @@ export default function AgriculturalPlanningPage() {
           <div className="bg-white rounded-3xl shadow-2xl p-12 md:p-16 border-2 border-[#c8e0c0] transform hover:scale-[1.02] transition-all duration-500">
             <div className="flex items-center gap-4 mb-8">
               <div className="w-2 h-16 bg-gradient-to-b from-[#5a7c3e] to-[#9fbd6f] rounded-full" />
-              <h2 className="text-5xl font-bold text-[#2d3e1f]" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h2
+                className="text-5xl font-bold text-[#2d3e1f]"
+                style={{ fontFamily: "Playfair Display, serif" }}
+              >
                 Overview
               </h2>
             </div>
-            <p className="text-xl text-[#6b7c5c] leading-relaxed mb-6" style={{ fontFamily: 'Lora, serif' }}>
-              Agricultural Planning & Setup is the foundation of successful suran cultivation. This service focuses on structured planning before plantation, ensuring that land preparation, crop cycles, and timelines are aligned with practical farming requirements.
+            <p
+              className="text-xl text-[#6b7c5c] leading-relaxed mb-6"
+              style={{ fontFamily: "Lora, serif" }}
+            >
+              Agricultural Planning & Setup is the foundation of successful
+              suran (elephant foot yam) cultivation. This service focuses on
+              structured agricultural planning before plantation, ensuring that
+              land preparation, suran crop cycles, and cultivation timelines are
+              aligned with practical farming and export-oriented requirements.
             </p>
-            <p className="text-xl text-[#5a7c3e] font-semibold" style={{ fontFamily: 'Lora, serif' }}>
-              Our goal at this stage is to reduce uncertainty by planning the cultivation process in advance.
+
+            <p
+              className="text-xl text-[#5a7c3e] font-semibold"
+              style={{ fontFamily: "Lora, serif" }}
+            >
+              Our goal at this stage is to reduce uncertainty through planned
+              cultivation, disciplined execution, and a structured farming model
+              that supports consistent yield and long-term sustainability.
             </p>
           </div>
         </div>
@@ -115,7 +153,10 @@ export default function AgriculturalPlanningPage() {
             <div className="inline-block px-6 py-2 bg-[#3e790e] text-white rounded-full text-md font-semibold mb-4 animate-pulse-slow">
               CORE SERVICES
             </div>
-            <h2 className="text-6xl font-bold text-[#2d3e1f] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <h2
+              className="text-6xl font-bold text-[#2d3e1f] mb-4"
+              style={{ fontFamily: "Playfair Display, serif" }}
+            >
               What This Service Covers
             </h2>
           </div>
@@ -165,7 +206,10 @@ export default function AgriculturalPlanningPage() {
               <div className="absolute inset-16 bg-white rounded-full transform translate-x-1/2 -translate-y-1/2" />
             </div>
 
-            <h2 className="text-5xl font-bold mb-12 relative z-10" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <h2
+              className="text-5xl font-bold mb-12 relative z-10"
+              style={{ fontFamily: "Playfair Display, serif" }}
+            >
               🎯 Why Agricultural Planning Matters
             </h2>
 
@@ -177,27 +221,36 @@ export default function AgriculturalPlanningPage() {
             </div>
           </div>
         </div>
-      </section>  
+      </section>
       {/* CTA Section */}
       <section className="relative py-10 px-6 bg-[#2d3e1f] ">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2
+            className="text-5xl md:text-6xl font-bold text-white mb-6"
+            style={{ fontFamily: "Playfair Display, serif" }}
+          >
             Ready to Start Planning?
           </h2>
-          <p className="text-xl text-[#c5d4b8] mb-10" style={{ fontFamily: 'Lora, serif' }}>
-            To understand how this service fits into the overall business model, explore our full services or contact us for more details.
+          <p
+            className="text-xl text-[#c5d4b8] mb-10"
+            style={{ fontFamily: "Lora, serif" }}
+          >
+            To understand how this service fits into the overall business model,
+            explore our full services or contact us for more details.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/services">
-            <button className="group relative px-10 py-5 bg-white text-[#2d3e1f] rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-              <span className="relative z-10 font-bold text-lg">Explore All Services</span>
-              <div className="absolute inset-0 bg-[#9fbd6f] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
-            </button>
+              <button className="group relative px-10 py-5 bg-white text-[#2d3e1f] rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                <span className="relative z-10 font-bold text-lg">
+                  Explore All Services
+                </span>
+                <div className="absolute inset-0 bg-[#9fbd6f] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+              </button>
             </Link>
-             <Link href= "/contact">
-            <button className="px-10 py-5 border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-[#2d3e1f] transition-all duration-300 hover:scale-105">
-              Contact Us
-            </button>
+            <Link href="/contact">
+              <button className="px-10 py-5 border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-[#2d3e1f] transition-all duration-300 hover:scale-105">
+                Contact Us
+              </button>
             </Link>
           </div>
         </div>
@@ -207,14 +260,14 @@ export default function AgriculturalPlanningPage() {
 }
 
 // Service Card Component
-function ServiceCard({ 
-  number, 
-  title, 
-  icon, 
-  description, 
-  benefit, 
-  delay 
-}: { 
+function ServiceCard({
+  number,
+  title,
+  icon,
+  description,
+  benefit,
+  delay,
+}: {
   number: string;
   title: string;
   icon: string;
@@ -232,7 +285,7 @@ function ServiceCard({
           setTimeout(() => setIsVisible(true), delay);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (cardRef.current) {
@@ -246,7 +299,7 @@ function ServiceCard({
     <div
       ref={cardRef}
       className={`group relative bg-white rounded-2xl p-8 shadow-lg border-2 border-[#c8e0c0] hover:shadow-2xl transition-all duration-500 transform ${
-        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
       }`}
     >
       {/* Number Badge */}
@@ -260,18 +313,27 @@ function ServiceCard({
       </div>
 
       {/* Title */}
-      <h3 className="text-2xl font-bold text-[#2d3e1f] mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+      <h3
+        className="text-2xl font-bold text-[#2d3e1f] mb-4"
+        style={{ fontFamily: "Montserrat, sans-serif" }}
+      >
         {title}
       </h3>
 
       {/* Description */}
-      <p className="text-[#6b7c5c] mb-4 leading-relaxed" style={{ fontFamily: 'Lora, serif' }}>
+      <p
+        className="text-[#6b7c5c] mb-4 leading-relaxed"
+        style={{ fontFamily: "Lora, serif" }}
+      >
         {description}
       </p>
 
       {/* Benefit */}
       <div className="mt-6 pt-6 border-t-2 border-[#d8ecd1]">
-        <p className="text-[#5a7c3e] font-semibold italic" style={{ fontFamily: 'Lora, serif' }}>
+        <p
+          className="text-[#5a7c3e] font-semibold italic"
+          style={{ fontFamily: "Lora, serif" }}
+        >
           {benefit}
         </p>
       </div>
@@ -288,10 +350,17 @@ function BenefitItem({ text }: { text: string }) {
     <div className="flex items-start gap-3 group">
       <div className="mt-1 w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:scale-110 transition-all duration-300">
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+          <path
+            fillRule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clipRule="evenodd"
+          />
         </svg>
       </div>
-      <span className="text-lg font-medium" style={{ fontFamily: 'Lora, serif' }}>
+      <span
+        className="text-lg font-medium"
+        style={{ fontFamily: "Lora, serif" }}
+      >
         {text}
       </span>
     </div>

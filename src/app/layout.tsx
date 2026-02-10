@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "bk agro",
-  description: "bk agro pune's best suran company. ",
+  title: "BK Agro Exporters | Structured Suran Farming & Export from India",
+  description: "Learn about BK Agro Exporters structured suran farming approach focused on planned cultivation, quality handling, and reliable domestic and international market supply",
 };
 
 export default function RootLayout({

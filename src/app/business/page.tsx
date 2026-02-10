@@ -1,13 +1,29 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { Sprout, Calendar, Package, Globe,CheckCircle2,ArrowRight,MapPin,AlertCircle,Target,BarChart3,Leaf, Shield} from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
-import {processSteps, investmentHighlights, marketRegions, modelBenefits} from "../utils/data"
-
-
+import React, { useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import {
+  Sprout,
+  Calendar,
+  Package,
+  Globe,
+  CheckCircle2,
+  ArrowRight,
+  MapPin,
+  AlertCircle,
+  Target,
+  BarChart3,
+  Leaf,
+  Shield,
+} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  processSteps,
+  investmentHighlights,
+  marketRegions,
+  modelBenefits,
+} from "../utils/data";
 
 export default function BusinessModelPage() {
   const { scrollYProgress } = useScroll();
@@ -22,10 +38,7 @@ export default function BusinessModelPage() {
       {/* Hero Banner with Background Image */}
       <section className="relative h-[70vh] min-h-[600px] overflow-hidden">
         {/* Background Image with Parallax */}
-        <motion.div 
-          style={{ y: yHero }}
-          className="absolute inset-0"
-        >
+        <motion.div style={{ y: yHero }} className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 z-10" />
           <Image
             src="/images/suran-sec2-img2.jpeg"
@@ -72,7 +85,8 @@ export default function BusinessModelPage() {
                 transition={{ delay: 0.6 }}
                 className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light"
               >
-                A structured agricultural model with domestic and international market access
+                A structured agricultural model with domestic and international
+                market access
               </motion.p>
 
               <motion.div
@@ -83,7 +97,9 @@ export default function BusinessModelPage() {
               >
                 <div className="flex items-center justify-center gap-3 text-white/80">
                   <Leaf className="w-5 h-5" />
-                  <span className="text-sm">Structured • Transparent • Market-Driven</span>
+                  <span className="text-sm">
+                    Structured • Transparent • Market-Driven
+                  </span>
                 </div>
               </motion.div>
             </motion.div>
@@ -123,9 +139,14 @@ export default function BusinessModelPage() {
               Built on Structure, Not Speculation
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Our business model is built around structured suran (elephant foot yam) cultivation, 
-              supported by planned farming practices and aligned with real market demand. The focus 
-              is on clarity, disciplined execution, and balanced market exposure rather than speculation.
+              Our business model is built around structured suran (elephant foot
+              yam) cultivation, supported by planned farming practices and
+              aligned with verified domestic and export market demand. We focus
+              on clarity, disciplined execution, and controlled exposure rather
+              than speculative farming outcomes. Through contract suran farming,
+              BK Agro Exporters enables predictable crop cycles, guided
+              cultivation, and quality-led harvests, creating long-term value
+              across the agricultural supply chain.
             </p>
           </motion.div>
         </div>
@@ -142,7 +163,7 @@ export default function BusinessModelPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-                Model{' '}
+                Model{" "}
                 <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
                   Overview
                 </span>
@@ -156,7 +177,7 @@ export default function BusinessModelPage() {
                   { icon: Sprout, text: "Cultivation planning" },
                   { icon: BarChart3, text: "Crop growth and monitoring" },
                   { icon: Package, text: "Harvest and quality handling" },
-                  { icon: Globe, text: "Domestic and export market supply" }
+                  { icon: Globe, text: "Domestic and export market supply" },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -169,14 +190,17 @@ export default function BusinessModelPage() {
                     <div className="p-3 bg-white rounded-lg shadow-sm group-hover:shadow-md transition-shadow">
                       <item.icon className="w-6 h-6 text-green-600" />
                     </div>
-                    <span className="text-gray-700 font-medium">{item.text}</span>
+                    <span className="text-gray-700 font-medium">
+                      {item.text}
+                    </span>
                   </motion.div>
                 ))}
               </div>
 
               <p className="text-gray-600 mt-8 p-4 bg-blue-50 rounded-xl border-l-4 border-blue-500">
                 <Shield className="w-5 h-5 inline mr-2 text-blue-600" />
-                Each stage is designed to reduce uncertainty through planning and process control.
+                Each stage is designed to reduce uncertainty through planning
+                and process control.
               </p>
             </motion.div>
 
@@ -233,12 +257,12 @@ export default function BusinessModelPage() {
           <motion.div
             animate={{
               scale: [1, 1.2, 1],
-              opacity: [0.03, 0.05, 0.03]
+              opacity: [0.03, 0.05, 0.03],
             }}
             transition={{
               duration: 20,
               repeat: Infinity,
-              ease: "linear"
+              ease: "linear",
             }}
             className="absolute top-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full blur-3xl"
           />
@@ -252,11 +276,11 @@ export default function BusinessModelPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-              How The{' '}
+              How The{" "}
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
                 Business Model
-              </span>
-              {' '}Works
+              </span>{" "}
+              Works
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               A step-by-step journey from participation to market outcome
@@ -284,9 +308,13 @@ export default function BusinessModelPage() {
                     onMouseLeave={() => setActiveStep(null)}
                     className="relative"
                   >
-                    <div className={`lg:grid lg:grid-cols-2 lg:gap-12 items-center ${isEven ? '' : 'lg:flex-row-reverse'}`}>
+                    <div
+                      className={`lg:grid lg:grid-cols-2 lg:gap-12 items-center ${isEven ? "" : "lg:flex-row-reverse"}`}
+                    >
                       {/* Content */}
-                      <div className={`${isEven ? 'lg:text-right lg:pr-16' : 'lg:col-start-2 lg:pl-16'}`}>
+                      <div
+                        className={`${isEven ? "lg:text-right lg:pr-16" : "lg:col-start-2 lg:pl-16"}`}
+                      >
                         <motion.div
                           animate={{
                             scale: activeStep === index ? 1.02 : 1,
@@ -295,8 +323,12 @@ export default function BusinessModelPage() {
                           className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
                         >
                           {/* Step number */}
-                          <div className={`inline-block mb-4 ${isEven ? 'lg:float-right lg:ml-4' : 'lg:float-left lg:mr-4'}`}>
-                            <span className={`text-6xl font-black bg-gradient-to-br ${step.color} bg-clip-text text-transparent opacity-20`}>
+                          <div
+                            className={`inline-block mb-4 ${isEven ? "lg:float-right lg:ml-4" : "lg:float-left lg:mr-4"}`}
+                          >
+                            <span
+                              className={`text-6xl font-black bg-gradient-to-br ${step.color} bg-clip-text text-transparent opacity-20`}
+                            >
                               {step.number}
                             </span>
                           </div>
@@ -315,28 +347,33 @@ export default function BusinessModelPage() {
                             className={`mt-4 inline-flex items-center gap-2 text-sm font-semibold bg-gradient-to-r ${step.color} bg-clip-text text-transparent`}
                           >
                             <span>Step {index + 1}</span>
-                            <ArrowRight className="w-4 h-4" style={{ 
-                              background: `linear-gradient(to right, var(--tw-gradient-stops))`,
-                              WebkitBackgroundClip: 'text',
-                              backgroundClip: 'text'
-                            }} />
+                            <ArrowRight
+                              className="w-4 h-4"
+                              style={{
+                                background: `linear-gradient(to right, var(--tw-gradient-stops))`,
+                                WebkitBackgroundClip: "text",
+                                backgroundClip: "text",
+                              }}
+                            />
                           </motion.div>
                         </motion.div>
                       </div>
 
                       {/* Icon node */}
-                      <div className={`hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ${isEven ? '' : ''}`}>
+                      <div
+                        className={`hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ${isEven ? "" : ""}`}
+                      >
                         <motion.div
                           animate={{
                             scale: activeStep === index ? 1.2 : 1,
-                            rotate: activeStep === index ? 360 : 0
+                            rotate: activeStep === index ? 360 : 0,
                           }}
                           transition={{ duration: 0.6 }}
                           className={`w-20 h-20 rounded-full bg-gradient-to-br ${step.color} p-4 shadow-xl flex items-center justify-center relative z-10`}
                         >
                           <Icon className="w-full h-full text-white" />
                         </motion.div>
-                        
+
                         {/* Pulse effect */}
                         {activeStep === index && (
                           <motion.div
@@ -351,10 +388,14 @@ export default function BusinessModelPage() {
 
                     {/* Mobile icon */}
                     <div className="lg:hidden flex items-center gap-4 mt-4 mb-2">
-                      <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${step.color} p-3 shadow-lg`}>
+                      <div
+                        className={`w-12 h-12 rounded-full bg-gradient-to-br ${step.color} p-3 shadow-lg`}
+                      >
                         <Icon className="w-full h-full text-white" />
                       </div>
-                      <span className="text-sm font-semibold text-gray-500">Step {index + 1} of 6</span>
+                      <span className="text-sm font-semibold text-gray-500">
+                        Step {index + 1} of 6
+                      </span>
                     </div>
                   </motion.div>
                 );
@@ -378,8 +419,12 @@ export default function BusinessModelPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8">
-                  <h3 className="text-white text-2xl font-bold mb-2">Quality at Every Stage</h3>
-                  <p className="text-white/90">From field to market, excellence is our standard</p>
+                  <h3 className="text-white text-2xl font-bold mb-2">
+                    Quality at Every Stage
+                  </h3>
+                  <p className="text-white/90">
+                    From field to market, excellence is our standard
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -391,10 +436,14 @@ export default function BusinessModelPage() {
       <section className="py-10 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }} />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+          />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -405,12 +454,14 @@ export default function BusinessModelPage() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
-              Investment{' '}
+              Investment{" "}
               <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                 Snapshot
               </span>
             </h2>
-            <p className="text-gray-400 text-lg">Clear numbers, transparent structure</p>
+            <p className="text-gray-400 text-lg">
+              Clear numbers, transparent structure
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -428,14 +479,16 @@ export default function BusinessModelPage() {
                 >
                   {/* Glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
-                  
+
                   <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300">
                     <div className="flex flex-col items-center text-center">
                       <div className="w-14 h-14 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl p-3 mb-4 shadow-lg">
                         <Icon className="w-full h-full text-white" />
                       </div>
                       <p className="text-gray-400 text-sm mb-2">{item.label}</p>
-                      <p className={`text-2xl font-bold ${item.color} text-white`}>
+                      <p
+                        className={`text-2xl font-bold ${item.color} text-white`}
+                      >
                         {item.value}
                       </p>
                     </div>
@@ -470,7 +523,7 @@ export default function BusinessModelPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-              Market{' '}
+              Market{" "}
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
                 Focus
               </span>
@@ -492,8 +545,10 @@ export default function BusinessModelPage() {
                 className="relative group"
               >
                 {/* Gradient glow */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${market.color} opacity-0 group-hover:opacity-10 rounded-3xl blur-xl transition-all duration-500`} />
-                
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r ${market.color} opacity-0 group-hover:opacity-10 rounded-3xl blur-xl transition-all duration-500`}
+                />
+
                 <div className="relative bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="text-5xl">{market.flag}</div>
@@ -535,7 +590,7 @@ export default function BusinessModelPage() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-              Why This Model is{' '}
+              Why This Model is{" "}
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
                 Structured
               </span>
@@ -583,7 +638,8 @@ export default function BusinessModelPage() {
               Ready to Learn More?
             </h2>
             <p className="text-xl text-gray-300 mb-10">
-              Want to understand the business in detail or discuss participation?
+              Want to understand the business in detail or discuss
+              participation?
             </p>
 
             <Link href="/contact">
