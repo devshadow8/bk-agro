@@ -71,8 +71,9 @@ export default function ContactUs() {
   };
 
   const interests = [
-    { label: 'Farming Partnership', value: 'farming' },
-    { label: 'General Inquiry', value: 'general' }
+    { label: 'Farming Partnership', value: 'Farming Partnership' },
+    { label: 'Organic Fertilizer (Powder & Liquid)', value: 'Organic Fertilizer (Powder & Liquid)' },
+    { label: 'General Inquiry', value: 'general Inquiry' }
   ];
 
   return (
